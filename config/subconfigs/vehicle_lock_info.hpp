@@ -23,9 +23,9 @@ class unlocked
 	lockTeam = "Unlocked";
 };
 
-class admin_team
+class cas_team
 {
-	lockTeam = "AdminLock";
+	lockTeam = "CASLock";
 };
 
 //Jeeps + Small Cars
@@ -90,36 +90,36 @@ class vn_b_boat_13_01 : unlocked {};
 
 //Air assets
 //Cobra Helicopter
-class vn_b_air_ah1g_01 : admin_team {};
-class vn_b_air_ah1g_02 : admin_team {};
-class vn_b_air_ah1g_03 : admin_team {};
-class vn_b_air_ah1g_04 : admin_team {};
-class vn_b_air_ah1g_05 : admin_team {};
-class vn_b_air_ah1g_06 : admin_team {};
-class vn_b_air_ah1g_07 : admin_team {};
-class vn_b_air_ah1g_08 : admin_team {};
-class vn_b_air_ah1g_09 : admin_team {};
-class vn_b_air_ah1g_10 : admin_team {};
+class vn_b_air_ah1g_01 : green_hornet {};
+class vn_b_air_ah1g_02 : green_hornet {};
+class vn_b_air_ah1g_03 : green_hornet {};
+class vn_b_air_ah1g_04 : green_hornet {};
+class vn_b_air_ah1g_05 : green_hornet {};
+class vn_b_air_ah1g_06 : green_hornet {};
+class vn_b_air_ah1g_07 : green_hornet {};
+class vn_b_air_ah1g_08 : green_hornet {};
+class vn_b_air_ah1g_09 : green_hornet {};
+class vn_b_air_ah1g_10 : green_hornet {};
 
-class vn_b_air_ah1g_01_usmc : admin_team {};
-class vn_b_air_ah1g_02_usmc : admin_team {};
-class vn_b_air_ah1g_03_usmc : admin_team {};
-class vn_b_air_ah1g_04_usmc : admin_team {};
-class vn_b_air_ah1g_05_usmc : admin_team {};
-class vn_b_air_ah1g_06_usmc : admin_team {};
-class vn_b_air_ah1g_07_usmc : admin_team {};
-class vn_b_air_ah1g_08_usmc : admin_team {};
-class vn_b_air_ah1g_09_usmc : admin_team {};
-class vn_b_air_ah1g_10_usmc : admin_team {};
+class vn_b_air_ah1g_01_usmc : green_hornet {};
+class vn_b_air_ah1g_02_usmc : green_hornet {};
+class vn_b_air_ah1g_03_usmc : green_hornet {};
+class vn_b_air_ah1g_04_usmc : green_hornet {};
+class vn_b_air_ah1g_05_usmc : green_hornet {};
+class vn_b_air_ah1g_06_usmc : green_hornet {};
+class vn_b_air_ah1g_07_usmc : green_hornet {};
+class vn_b_air_ah1g_08_usmc : green_hornet {};
+class vn_b_air_ah1g_09_usmc : green_hornet {};
+class vn_b_air_ah1g_10_usmc : green_hornet {};
 
 //Choctaw
 class vn_b_air_ch34_01_01 : green_hornet {};
 class vn_b_air_ch34_03_01 : green_hornet {};
 //Choctaw gunships
-class vn_b_air_ch34_04_01 : admin_team {};
-class vn_b_air_ch34_04_02 : admin_team {};
-class vn_b_air_ch34_04_03 : admin_team {};
-class vn_b_air_ch34_04_04 : admin_team {};
+class vn_b_air_ch34_04_01 : green_hornet {};
+class vn_b_air_ch34_04_02 : green_hornet {};
+class vn_b_air_ch34_04_03 : green_hornet {};
+class vn_b_air_ch34_04_04 : green_hornet {};
 
 //Littlebird
 class C_Heli_Light_01_civil_F : unlocked {};
@@ -150,62 +150,62 @@ class vn_b_air_uh1d_02_06 : green_hornet {};
 class vn_b_air_uh1d_02_07 : green_hornet {};
 
 //UH-1D Bushranger
-class vn_b_air_uh1d_03_06 : admin_team {};
+class vn_b_air_uh1d_03_06 : green_hornet {};
 
 //UH1C - Hog
-class vn_b_air_uh1c_01_01 : admin_team {};
-class vn_b_air_uh1c_01_02 : admin_team {};
-class vn_b_air_uh1c_01_03 : admin_team {};
-class vn_b_air_uh1c_01_04 : admin_team {};
-class vn_b_air_uh1c_01_05 : admin_team {};
-class vn_b_air_uh1c_01_06 : admin_team {};
-class vn_b_air_uh1c_01_07 : admin_team {};
+class vn_b_air_uh1c_01_01 : green_hornet {};
+class vn_b_air_uh1c_01_02 : green_hornet {};
+class vn_b_air_uh1c_01_03 : green_hornet {};
+class vn_b_air_uh1c_01_04 : green_hornet {};
+class vn_b_air_uh1c_01_05 : green_hornet {};
+class vn_b_air_uh1c_01_06 : green_hornet {};
+class vn_b_air_uh1c_01_07 : green_hornet {};
 
 //UH1C - Gunship
-class vn_b_air_uh1c_02_01 : admin_team {};
-class vn_b_air_uh1c_02_02 : admin_team {};
-class vn_b_air_uh1c_02_03 : admin_team {};
-class vn_b_air_uh1c_02_04 : admin_team {};
-class vn_b_air_uh1c_02_05 : admin_team {};
-class vn_b_air_uh1c_02_06 : admin_team {};
-class vn_b_air_uh1c_02_07 : admin_team {};
+class vn_b_air_uh1c_02_01 : green_hornet {};
+class vn_b_air_uh1c_02_02 : green_hornet {};
+class vn_b_air_uh1c_02_03 : green_hornet {};
+class vn_b_air_uh1c_02_04 : green_hornet {};
+class vn_b_air_uh1c_02_05 : green_hornet {};
+class vn_b_air_uh1c_02_06 : green_hornet {};
+class vn_b_air_uh1c_02_07 : green_hornet {};
 
 //UH1C - Hornet
-class vn_b_air_uh1c_03_01 : admin_team {};
-class vn_b_air_uh1c_03_02 : admin_team {};
-class vn_b_air_uh1c_03_03 : admin_team {};
-class vn_b_air_uh1c_03_04 : admin_team {};
-class vn_b_air_uh1c_03_05 : admin_team {};
-class vn_b_air_uh1c_03_06 : admin_team {};
-class vn_b_air_uh1c_03_07 : admin_team {};
+class vn_b_air_uh1c_03_01 : green_hornet {};
+class vn_b_air_uh1c_03_02 : green_hornet {};
+class vn_b_air_uh1c_03_03 : green_hornet {};
+class vn_b_air_uh1c_03_04 : green_hornet {};
+class vn_b_air_uh1c_03_05 : green_hornet {};
+class vn_b_air_uh1c_03_06 : green_hornet {};
+class vn_b_air_uh1c_03_07 : green_hornet {};
 
 //UH1C - Frog
-class vn_b_air_uh1c_04_01 : admin_team {};
-class vn_b_air_uh1c_04_02 : admin_team {};
-class vn_b_air_uh1c_04_03 : admin_team {};
-class vn_b_air_uh1c_04_04 : admin_team {};
-class vn_b_air_uh1c_04_05 : admin_team {};
-class vn_b_air_uh1c_04_06 : admin_team {};
-class vn_b_air_uh1c_04_07 : admin_team {};
+class vn_b_air_uh1c_04_01 : green_hornet {};
+class vn_b_air_uh1c_04_02 : green_hornet {};
+class vn_b_air_uh1c_04_03 : green_hornet {};
+class vn_b_air_uh1c_04_04 : green_hornet {};
+class vn_b_air_uh1c_04_05 : green_hornet {};
+class vn_b_air_uh1c_04_06 : green_hornet {};
+class vn_b_air_uh1c_04_07 : green_hornet {};
 
 //UH1C - Heavy Hog
-class vn_b_air_uh1c_05_01 : admin_team {};
-class vn_b_air_uh1c_05_02 : admin_team {};
-class vn_b_air_uh1c_05_03 : admin_team {};
-class vn_b_air_uh1c_05_04 : admin_team {};
-class vn_b_air_uh1c_05_05 : admin_team {};
-class vn_b_air_uh1c_05_06 : admin_team {};
-class vn_b_air_uh1c_05_07 : admin_team {};
+class vn_b_air_uh1c_05_01 : green_hornet {};
+class vn_b_air_uh1c_05_02 : green_hornet {};
+class vn_b_air_uh1c_05_03 : green_hornet {};
+class vn_b_air_uh1c_05_04 : green_hornet {};
+class vn_b_air_uh1c_05_05 : green_hornet {};
+class vn_b_air_uh1c_05_06 : green_hornet {};
+class vn_b_air_uh1c_05_07 : green_hornet {};
 
 //UH1C - ARA
-class vn_b_air_uh1c_06_01 : admin_team {};
-class vn_b_air_uh1c_06_02 : admin_team {};
+class vn_b_air_uh1c_06_01 : green_hornet {};
+class vn_b_air_uh1c_06_02 : green_hornet {};
 
 //UH1B - Slick
 class vn_b_air_uh1c_07_01 : green_hornet {};
 
 //UH1E - Heavy Gunship
-class vn_b_air_uh1e_02_04 : admin_team {};
+class vn_b_air_uh1e_02_04 : green_hornet {};
 
 //UH1F - Slick
 class vn_b_air_uh1f_01_03 : green_hornet {};
@@ -216,52 +216,52 @@ class vn_i_air_ch34_02_01 : green_hornet {};
 class vn_i_air_ch34_02_02 : green_hornet {};
 
 //F4 aircraft
-class vn_b_air_f4c_cap : admin_team {};
-class vn_b_air_f4c_cas : admin_team {};
-class vn_b_air_f4c_hcas : admin_team {};
-class vn_b_air_f4c_ehcas : admin_team {};
-class vn_b_air_f4c_ucas : admin_team {};
-class vn_b_air_f4c_at : admin_team {};
-class vn_b_air_f4c_mr : admin_team {};
-class vn_b_air_f4c_lrbmb : admin_team {};
-class vn_b_air_f4c_lbmb : admin_team {};
-class vn_b_air_f4c_bmb : admin_team {};
-class vn_b_air_f4c_mbmb : admin_team {};
-class vn_b_air_f4c_hbmb : admin_team {};
-class vn_b_air_f4c_gbu : admin_team {};
-class vn_b_air_f4c_cbu : admin_team {};
-class vn_b_air_f4c_sead : admin_team {};
-class vn_b_air_f4c_chico : admin_team {};
-class vn_b_air_f4b_usmc_cap : admin_team {};
-class vn_b_air_f4b_usmc_cas : admin_team {};
-class vn_b_air_f4b_usmc_hcas : admin_team {};
-class vn_b_air_f4b_usmc_ehcas : admin_team {};
-class vn_b_air_f4b_usmc_ucas : admin_team {};
-class vn_b_air_f4b_usmc_at : admin_team {};
-class vn_b_air_f4b_usmc_mr : admin_team {};
-class vn_b_air_f4b_usmc_lrbmb : admin_team {};
-class vn_b_air_f4b_usmc_lbmb : admin_team {};
-class vn_b_air_f4b_usmc_bmb : admin_team {};
-class vn_b_air_f4b_usmc_mbmb : admin_team {};
-class vn_b_air_f4b_usmc_hbmb : admin_team {};
-class vn_b_air_f4b_usmc_gbu : admin_team {};
-class vn_b_air_f4b_usmc_cbu : admin_team {};
-class vn_b_air_f4b_usmc_sead : admin_team {};
-class vn_b_air_f4b_navy_cap : admin_team {};
-class vn_b_air_f4b_navy_cas : admin_team {};
-class vn_b_air_f4b_navy_hcas : admin_team {};
-class vn_b_air_f4b_navy_ehcas : admin_team {};
-class vn_b_air_f4b_navy_ucas : admin_team {};
-class vn_b_air_f4b_navy_at : admin_team {};
-class vn_b_air_f4b_navy_mr : admin_team {};
-class vn_b_air_f4b_navy_lrbmb : admin_team {};
-class vn_b_air_f4b_navy_lbmb : admin_team {};
-class vn_b_air_f4b_navy_bmb : admin_team {};
-class vn_b_air_f4b_navy_mbmb : admin_team {};
-class vn_b_air_f4b_navy_hbmb : admin_team {};
-class vn_b_air_f4b_navy_gbu : admin_team {};
-class vn_b_air_f4b_navy_cbu : admin_team {};
-class vn_b_air_f4b_navy_sead : admin_team {};
+class vn_b_air_f4c_cap : green_hornet {};
+class vn_b_air_f4c_cas : green_hornet {};
+class vn_b_air_f4c_hcas : green_hornet {};
+class vn_b_air_f4c_ehcas : green_hornet {};
+class vn_b_air_f4c_ucas : green_hornet {};
+class vn_b_air_f4c_at : green_hornet {};
+class vn_b_air_f4c_mr : green_hornet {};
+class vn_b_air_f4c_lrbmb : green_hornet {};
+class vn_b_air_f4c_lbmb : green_hornet {};
+class vn_b_air_f4c_bmb : green_hornet {};
+class vn_b_air_f4c_mbmb : green_hornet {};
+class vn_b_air_f4c_hbmb : green_hornet {};
+class vn_b_air_f4c_gbu : green_hornet {};
+class vn_b_air_f4c_cbu : green_hornet {};
+class vn_b_air_f4c_sead : green_hornet {};
+class vn_b_air_f4c_chico : green_hornet {};
+class vn_b_air_f4b_usmc_cap : green_hornet {};
+class vn_b_air_f4b_usmc_cas : green_hornet {};
+class vn_b_air_f4b_usmc_hcas : green_hornet {};
+class vn_b_air_f4b_usmc_ehcas : green_hornet {};
+class vn_b_air_f4b_usmc_ucas : green_hornet {};
+class vn_b_air_f4b_usmc_at : green_hornet {};
+class vn_b_air_f4b_usmc_mr : green_hornet {};
+class vn_b_air_f4b_usmc_lrbmb : green_hornet {};
+class vn_b_air_f4b_usmc_lbmb : green_hornet {};
+class vn_b_air_f4b_usmc_bmb : green_hornet {};
+class vn_b_air_f4b_usmc_mbmb : green_hornet {};
+class vn_b_air_f4b_usmc_hbmb : green_hornet {};
+class vn_b_air_f4b_usmc_gbu : green_hornet {};
+class vn_b_air_f4b_usmc_cbu : green_hornet {};
+class vn_b_air_f4b_usmc_sead : green_hornet {};
+class vn_b_air_f4b_navy_cap : green_hornet {};
+class vn_b_air_f4b_navy_cas : green_hornet {};
+class vn_b_air_f4b_navy_hcas : green_hornet {};
+class vn_b_air_f4b_navy_ehcas : green_hornet {};
+class vn_b_air_f4b_navy_ucas : green_hornet {};
+class vn_b_air_f4b_navy_at : green_hornet {};
+class vn_b_air_f4b_navy_mr : green_hornet {};
+class vn_b_air_f4b_navy_lrbmb : green_hornet {};
+class vn_b_air_f4b_navy_lbmb : green_hornet {};
+class vn_b_air_f4b_navy_bmb : green_hornet {};
+class vn_b_air_f4b_navy_mbmb : green_hornet {};
+class vn_b_air_f4b_navy_hbmb : green_hornet {};
+class vn_b_air_f4b_navy_gbu : green_hornet {};
+class vn_b_air_f4b_navy_cbu : green_hornet {};
+class vn_b_air_f4b_navy_sead : green_hornet {};
 
 //Howitzer
 class vn_b_army_static_m101_02 : acav {};
