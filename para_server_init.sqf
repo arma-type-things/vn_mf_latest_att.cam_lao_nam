@@ -91,10 +91,10 @@ vn_mf_counterattackCampInfantryMultiplier = 6;
 para_s_bf_respawn_supply_cost = 50;
 
 
-// Set desired number of simultaneously active zones.  DEFAULT: 1
+// Set desired number of simultaneously active zones.
 vn_mf_targetNumberOfActiveZones = 1;
-// Set number of enemies per player.  DEFAULT: 2 (ATT MODIFIED)
-para_g_enemiesPerPlayer = 3;
+// Set number of enemies per player.
+para_g_enemiesPerPlayer = 2;
 //Global variable, so it needs syncing across the network.
 publicVariable "para_g_enemiesPerPlayer";
 

@@ -123,6 +123,8 @@ class para_s
 		class bf_veh_spawn_create_vehicle_rehandler {};
 		class bf_veh_spawn_on_building_objects_changed {};
 		class bf_veh_spawn_on_building_placed {};
+		class bf_veh_spawn_on_functional {};
+		class bf_veh_spawn_on_nonfunctional {};
 	};
 
 	class building_features_wreck_recovery
@@ -218,6 +220,12 @@ class para_s
 	{
 		PARA_SERVER_PATH(\respawn);
 		class on_player_respawn_rehandler {};
+	};
+
+	class terrain
+	{
+		PARA_SERVER_PATH(\terrain);
+		class hide_foliage {};
 	};
 
 	class voting
