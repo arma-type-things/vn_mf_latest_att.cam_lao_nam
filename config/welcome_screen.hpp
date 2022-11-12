@@ -2,7 +2,7 @@ class ParaWelcomeScreen {
     version = QUOT(VN_MF_VERSION);
 
     class Welcome {
-        title = "Welcome to Mike Force";
+        title = "Welcome to Mike Force with ATT modifications";
         /*content = "Structured Text Content";*/
 		content[] = {
 			"<t align='center' size='1.5'>Welcome to Mike Force!</t>",

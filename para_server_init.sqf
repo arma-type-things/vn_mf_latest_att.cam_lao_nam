@@ -255,6 +255,18 @@ friendlyATMines = [
     "vn_mine_m15"
 ];
 
+// ATT Changes
+diag_log "ATT: Initializing whitelists";
+att_cas_whitelist = call compile preProcessFile "cas_whitelist.txt"; // serverNamepace getVariable "admins";
+serverNamespace setVariable ["att_cas_whitelist", att_cas_whitelist];
+diag_log "ATT: Initialized CAS Whitelist";
+att_opfor_whitelist = call compile preProcessFile "opfor_whitelist.txt";
+serverNamespace setVariable ["att_opfor_whitelist", att_opfor_whitelist];
+diag_log "ATT: Initialized OPFOR Whitelist";
+att_reserved_slots = ["opfor_slot_01", "opfor_slot_02", "opfor_slot_03", "opfor_slot_04", "opfor_slot_05", "opfor_slot_06"];
+serverNamespace setVariable ["att_reserved_slots", att_reserved_slots];
+// END ATT Changes
+
 diag_log "VN MikeForce: Initialising stats";
 [] call vn_mf_fnc_stats_init;
 

@@ -22,10 +22,15 @@ params ["_player", "_role", "_vehicle"];
 
 private _isCopilot = (getNumber ([_vehicle, _vehicle unitTurret _player] call BIS_fnc_turretConfig >> "isCopilot") > 0);
 private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
+private _playerUid = getPlayerUID _player;
+private _casList = serverNamepace getVariable "att_cas_whitelist";
 
 if (_role == "driver" || _isCopilot) exitWith {
 	private _teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []];
 	if (_teamsVehicleIsLockedTo isEqualTo [] || _playerGroup in _teamsVehicleIsLockedTo) exitWith {
+		true
+	};
+	if (_playerUid in _casList) exitWith {
 		true
 	};
 	false
