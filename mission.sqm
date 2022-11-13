@@ -8,15 +8,15 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=5428;
+		nextID=5436;
 	};
 	class MarkerIDProvider
 	{
-		nextID=45;
+		nextID=50;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1290;
+		nextID=1356;
 	};
 	class Camera
 	{
@@ -339,14 +339,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -390,14 +390,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -447,7 +447,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=564;
+		items=570;
 		class Item0
 		{
 			dataType="Marker";
@@ -23184,16 +23184,96 @@ class Mission
 			};
 			id=5425;
 		};
+		class Item564
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15696.228,17.656429,7091.5269};
+				angles[]={0,2.083755,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5428;
+			type="vn_b_air_f100d_cap";
+		};
+		class Item565
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15695.485,17.656425,7069.6987};
+				angles[]={0,2.083755,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5429;
+			type="vn_b_air_f100d_cap";
+			atlOffset=-3.8146973e-006;
+		};
+		class Item566
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15693.925,17.656425,7045.3516};
+				angles[]={0,2.083755,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5430;
+			type="vn_b_air_f100d_cap";
+			atlOffset=-3.8146973e-006;
+		};
+		class Item567
+		{
+			dataType="Marker";
+			position[]={21396.023,0,13603.648};
+			name="rule_marker_01";
+			text="Don't be a dick";
+			type="mil_box";
+			id=5433;
+			atlOffset=87.384377;
+		};
+		class Item568
+		{
+			dataType="Marker";
+			position[]={21396.023,0,13406.713};
+			name="rule_marker_02";
+			text="Avoid AOs without task markers";
+			type="mil_box";
+			id=5434;
+			atlOffset=86.438774;
+		};
+		class Item569
+		{
+			dataType="Marker";
+			position[]={21396.023,0,13203.235};
+			name="rule_marker_03";
+			text="Join us on Discord: https://discord.gg/Wfx77vaU3p";
+			type="mil_box";
+			id=5435;
+			atlOffset=88.707581;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=113;
+			nextID=116;
 		};
 		class Links
 		{
-			items=113;
+			items=116;
 			class Item0
 			{
 				linkID=0;
@@ -24318,6 +24398,36 @@ class Mission
 			{
 				linkID=112;
 				item0=5410;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item113
+			{
+				linkID=113;
+				item0=5428;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item114
+			{
+				linkID=114;
+				item0=5429;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item115
+			{
+				linkID=115;
+				item0=5430;
 				item1=705;
 				class CustomData
 				{
