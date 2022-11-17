@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=5522;
+		nextID=5524;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1488;
+		nextID=1554;
 	};
 	class Camera
 	{
-		pos[]={14812.634,101.48862,6796.6167};
-		dir[]={-0.17087249,-0.31779578,0.93267542};
-		up[]={-0.057282742,0.9481352,0.31266218};
-		aside[]={0.98367232,5.8153455e-007,0.18021502};
+		pos[]={15852.854,45.932819,7078.4189};
+		dir[]={-0.45300162,-0.43024638,0.78081858};
+		up[]={-0.21590763,0.90271151,0.37215033};
+		aside[]={0.86497021,-1.4901161e-008,0.50182325};
 	};
 };
 binarizationWanted=0;
@@ -68,13 +68,14 @@ addons[]=
 	"A3_Structures_F_System",
 	"A3_Misc_F_Helpers",
 	"A3_Structures_F_Items_Vessels",
-	"weapons_f_vietnam_03_c"
+	"weapons_f_vietnam_03_c",
+	"static_f_vietnam_02_c"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=31;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -285,6 +286,13 @@ class AddonsMetaData
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
+		class Item30
+		{
+			className="static_f_vietnam_02_c";
+			name="static_f_vietnam_02_c";
+			author="Savage Game Design";
+			url="https://www.arma3.com";
+		};
 	};
 };
 class DynamicSimulation
@@ -339,14 +347,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -390,14 +398,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -447,7 +455,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=597;
+		items=599;
 		class Item0
 		{
 			dataType="Marker";
@@ -1862,7 +1870,7 @@ class Mission
 			type="mil_arrow";
 			angle=11.032681;
 			id=423;
-			atlOffset=15.831757;
+			atlOffset=22.251999;
 		};
 		class Item88
 		{
@@ -5805,17 +5813,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15759.07,17.718273,6907.3823};
-				angles[]={0,6.2785382,0};
+				position[]={15759.07,17.71804,6907.3818};
+				angles[]={0,6.278543,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="this addEventHandler [""GetIn"", " \n "{ " \n "  _maxwell = getMarkerPos ""zone_dharma""; " \n "  _soc_trang = getMarkerPos ""zone_soc_trang""; " \n "  _pleiku = getMarkerPos ""marker_pleiku_base""; " \n "  _migGroup = [[(_maxwell select 0),(_maxwell select 1),500], east, (configfile >> ""CfgGroups"" >> ""East"" >> ""VN_PAVN"" >> ""vn_o_group_air_army"" >> ""vn_o_group_air_11"")] call BIS_fnc_spawnGroup; " \n "  _migGroup reveal [this, 3.5]; " \n "  _startWp1 = _migGroup addWaypoint [_soc_trang, 0]; " \n "  _targetWp1 = _migGroup addWaypoint [_pleiku, 1]; " \n "  _targetWp1 setWaypointType ""SAD""; " \n "  [[blufor, ""HQ""], ""Four Migs spotted scrambling out of Maxwell! Repeat: Four Migs spotted scrambling out of Maxwell!""] remoteExec [""sideChat""]; " \n "}];";
 			};
 			id=1049;
 			type="vn_b_air_f4c_bmb";
-			atlOffset=-0.15076733;
+			atlOffset=-0.15100002;
 		};
 		class Item170
 		{
@@ -22694,7 +22703,7 @@ class Mission
 			};
 			id=5471;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.016090393;
+			atlOffset=0.015686035;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22741,7 +22750,7 @@ class Mission
 			};
 			id=5475;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0084838867;
+			atlOffset=0.0087966919;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22788,7 +22797,7 @@ class Mission
 			};
 			id=5476;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0017318726;
+			atlOffset=0.0024490356;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22835,7 +22844,7 @@ class Mission
 			};
 			id=5477;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0078735352;
+			atlOffset=0.0081863403;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22881,7 +22890,7 @@ class Mission
 			};
 			id=5478;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22351074;
+			atlOffset=0.22382355;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22927,7 +22936,7 @@ class Mission
 			};
 			id=5479;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22143555;
+			atlOffset=0.22174835;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22973,7 +22982,7 @@ class Mission
 			};
 			id=5480;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.21782684;
+			atlOffset=0.21854401;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23019,7 +23028,7 @@ class Mission
 			};
 			id=5481;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22126007;
+			atlOffset=0.22157288;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24538,6 +24547,38 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item597
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15774.683,16.756138,7140.2568};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5522;
+			type="vn_b_navy_static_l60mk3";
+			atlOffset=-9.5367432e-007;
+		};
+		class Item598
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15855.16,16.756138,7128.2959};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5523;
+			type="vn_b_navy_static_l60mk3";
+			atlOffset=-9.5367432e-007;
 		};
 	};
 	class Connections
