@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=5436;
+		nextID=5522;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1422;
+		nextID=1488;
 	};
 	class Camera
 	{
-		pos[]={16342.344,89.008575,8160.1362};
-		dir[]={-0.31848681,-0.64490247,-0.69492179};
-		up[]={-0.26869702,0.76420444,-0.58628511};
-		aside[]={-0.90916753,1.7413549e-006,0.41668689};
+		pos[]={14812.634,101.48862,6796.6167};
+		dir[]={-0.17087249,-0.31779578,0.93267542};
+		up[]={-0.057282742,0.9481352,0.31266218};
+		aside[]={0.98367232,5.8153455e-007,0.18021502};
 	};
 };
 binarizationWanted=0;
@@ -339,14 +339,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -390,14 +390,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -447,7 +447,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=570;
+		items=597;
 		class Item0
 		{
 			dataType="Marker";
@@ -21813,7 +21813,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
 			};
 			id=5351;
 			type="Land_vn_hootch_01_01";
@@ -22280,87 +22279,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14788.31,100.532,6818.938};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=5373;
-			type="vn_b_item_radio_urc10_gh";
-			atlOffset=0.00040435791;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item544
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14858.55,99.739998,6884.2109};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=5381;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.00026702881;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item545
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={14859.247,100.77421,6886.1055};
 				angles[]={0,4.3322039,0};
 			};
@@ -22389,514 +22307,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item546
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14859.354,99.739998,6883.4688};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=5383;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.00026702881;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item547
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14858.547,99.962997,6884.21};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5384;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.2232666;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item548
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14859.352,99.960999,6883.4658};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5385;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.2212677;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item549
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14859.354,100.18999,6883.4927};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5386;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.45025635;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item550
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14858.565,100.188,6884.2207};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5387;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.44827271;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item551
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14859.34,100.40199,6883.4771};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5388;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.66226196;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item552
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14859.338,100.62299,6883.4736};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5389;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.88326263;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item553
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14859.34,100.852,6883.501};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5390;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=1.1122665;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item554
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14858.566,100.404,6884.2178};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5391;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.66426849;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item555
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14858.564,100.625,6884.2148};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5392;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.88526917;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item556
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14858.566,100.854,6884.2417};
-				angles[]={0,2.3133118,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5393;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=1.1142654;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[""vn_prop_drink_08_01"",""vn_prop_food_fresh_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01""],[100,100,20,20,10]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item557
+		class Item544
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22931,7 +22342,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item558
+		class Item545
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22965,7 +22376,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item559
+		class Item546
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22999,7 +22410,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item560
+		class Item547
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23032,7 +22443,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item561
+		class Item548
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23065,7 +22476,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item562
+		class Item549
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23099,7 +22510,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item563
+		class Item550
 		{
 			dataType="Group";
 			side="Civilian";
@@ -23188,7 +22599,7 @@ class Mission
 			};
 			id=5425;
 		};
-		class Item564
+		class Item551
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23204,7 +22615,7 @@ class Mission
 			id=5428;
 			type="vn_b_air_f100d_cap";
 		};
-		class Item565
+		class Item552
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23221,7 +22632,7 @@ class Mission
 			type="vn_b_air_f100d_cap";
 			atlOffset=-3.8146973e-006;
 		};
-		class Item566
+		class Item553
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23238,7 +22649,7 @@ class Mission
 			type="vn_b_air_f100d_cap";
 			atlOffset=-3.8146973e-006;
 		};
-		class Item567
+		class Item554
 		{
 			dataType="Marker";
 			position[]={21396.023,0,13603.648};
@@ -23248,7 +22659,7 @@ class Mission
 			id=5433;
 			atlOffset=87.384377;
 		};
-		class Item568
+		class Item555
 		{
 			dataType="Marker";
 			position[]={21396.023,0,13406.713};
@@ -23258,7 +22669,7 @@ class Mission
 			id=5434;
 			atlOffset=86.438774;
 		};
-		class Item569
+		class Item556
 		{
 			dataType="Marker";
 			position[]={21396.023,0,13203.235};
@@ -23267,6 +22678,1866 @@ class Mission
 			type="mil_box";
 			id=5435;
 			atlOffset=88.707581;
+		};
+		class Item557
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14826.73,99.655678,6795.4707};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5471;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.016090393;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item558
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14826.797,99.648788,6795.8877};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5475;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0084838867;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item559
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14826.597,99.642036,6794.665};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5476;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0017318726;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item560
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14826.662,99.648178,6795.0708};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5477;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0078735352;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item561
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14826.731,99.863815,6795.4707};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5478;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22351074;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item562
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14826.798,99.86174,6795.8877};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5479;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22143555;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item563
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14826.598,99.858131,6794.665};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5480;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.21782684;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item564
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14826.663,99.861565,6795.0708};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5481;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22126007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item565
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14824.76,99.653946,6795.7852};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5490;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.013954163;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item566
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14824.826,99.647057,6796.2021};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5491;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0070648193;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item567
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14824.626,99.640305,6794.9795};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5492;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.00031280518;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item568
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14824.691,99.646446,6795.3853};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5493;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0064544678;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item569
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14824.761,99.862083,6795.7852};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5494;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22209167;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item570
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14824.827,99.860008,6796.2021};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5495;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22001648;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item571
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14824.627,99.8564,6794.9795};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5496;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.21640778;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item572
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14824.692,99.859833,6795.3853};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5497;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.219841;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item573
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14822.85,99.653946,6796.0986};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5498;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.013954163;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item574
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14822.916,99.647057,6796.5156};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5499;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0070648193;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item575
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14822.716,99.640305,6795.293};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5500;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.00031280518;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item576
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14822.781,99.646446,6795.6987};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5501;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0064544678;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item577
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14822.851,99.862083,6796.0986};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5502;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22209167;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item578
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14822.917,99.860008,6796.5156};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5503;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22001648;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item579
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14822.717,99.8564,6795.293};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5504;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.21640778;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item580
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14822.782,99.859833,6795.6987};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5505;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.219841;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item581
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14820.769,99.653946,6796.4355};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5506;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.013954163;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item582
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14820.835,99.647057,6796.8525};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5507;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0070648193;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item583
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14820.635,99.640305,6795.6299};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5508;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.00031280518;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item584
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14820.7,99.646446,6796.0356};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5509;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0064544678;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item585
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14820.77,99.862083,6796.4355};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5510;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22209167;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item586
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14820.836,99.860008,6796.8525};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5511;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22001648;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item587
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14820.636,99.8564,6795.6299};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5512;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.21640778;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item588
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14820.701,99.859833,6796.0356};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5513;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.219841;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item589
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14818.854,99.653946,6796.7368};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5514;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.013954163;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item590
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14818.921,99.647057,6797.1538};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5515;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0070648193;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item591
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14818.721,99.640305,6795.9312};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5516;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.00031280518;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item592
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14818.786,99.646446,6796.3369};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5517;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0064544678;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item593
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14818.855,99.862083,6796.7368};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5518;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22209167;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item594
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14818.922,99.860008,6797.1538};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5519;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.22001648;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item595
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14818.722,99.8564,6795.9312};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5520;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.21640778;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item596
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14818.787,99.859833,6796.3369};
+				angles[]={0,4.8772178,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5521;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.219841;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections
