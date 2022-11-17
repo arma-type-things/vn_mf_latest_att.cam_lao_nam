@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1554;
+		nextID=1686;
 	};
 	class Camera
 	{
-		pos[]={15852.854,45.932819,7078.4189};
-		dir[]={-0.45300162,-0.43024638,0.78081858};
-		up[]={-0.21590763,0.90271151,0.37215033};
-		aside[]={0.86497021,-1.4901161e-008,0.50182325};
+		pos[]={15773.396,24.361095,6903.103};
+		dir[]={-0.87680894,-0.45358935,0.15957077};
+		up[]={-0.44625935,0.89121073,0.081214905};
+		aside[]={0.1790494,-7.4505806e-009,0.98384005};
 	};
 };
 binarizationWanted=0;
@@ -5820,7 +5820,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this addEventHandler [""GetIn"", " \n "{ " \n "  _maxwell = getMarkerPos ""zone_dharma""; " \n "  _soc_trang = getMarkerPos ""zone_soc_trang""; " \n "  _pleiku = getMarkerPos ""marker_pleiku_base""; " \n "  _migGroup = [[(_maxwell select 0),(_maxwell select 1),500], east, (configfile >> ""CfgGroups"" >> ""East"" >> ""VN_PAVN"" >> ""vn_o_group_air_army"" >> ""vn_o_group_air_11"")] call BIS_fnc_spawnGroup; " \n "  _migGroup reveal [this, 3.5]; " \n "  _startWp1 = _migGroup addWaypoint [_soc_trang, 0]; " \n "  _targetWp1 = _migGroup addWaypoint [_pleiku, 1]; " \n "  _targetWp1 setWaypointType ""SAD""; " \n "  [[blufor, ""HQ""], ""Four Migs spotted scrambling out of Maxwell! Repeat: Four Migs spotted scrambling out of Maxwell!""] remoteExec [""sideChat""]; " \n "}];";
+				init="this addEventHandler [""GetIn"",  " \n "{  " \n "    private _current_response_team = missionNamespace getVariable ""ATT_CAS_mig_response_team""; " \n "    if (isNil ""_current_response_team"") then " \n "    { " \n "        _maxwell = getMarkerPos ""zone_dharma"";  " \n "        _soc_trang = getMarkerPos ""zone_soc_trang"";  " \n "        _pleiku = getMarkerPos ""marker_pleiku_base"";  " \n "        _migGroup = [[(_maxwell select 0),(_maxwell select 1), 1000], east, (configfile >> ""CfgGroups"" >> ""East"" >> ""VN_PAVN"" >> ""vn_o_group_air_army"" >> ""vn_o_group_air_11"")] call BIS_fnc_spawnGroup;  " \n "        _migGroup reveal [_this, 3.5]; " \n "        _migGroup deleteGroupWhenEmpty true; " \n "        _startWp1 = _migGroup addWaypoint [_soc_trang, 0];  " \n "        _targetWp1 = _migGroup addWaypoint [_pleiku, 1];  " \n "        _targetWp1 setWaypointType ""SAD""; " \n "         " \n "        _migGroup spawn " \n "        { " \n "            { " \n "                _x addEventHandler [""Killed"", " \n "                { " \n "                    [[blufor, ""HQ""], ""Splash one Mig!""] remoteExec [""sideChat""];  " \n "                    deleteVehicle _x; " \n "                }]; " \n "            } foreach units _this; " \n "        }; " \n "         " \n "        missionNamespace setVariable [""ATT_CAS_mig_response_team"", _migGroup, true]; " \n "        [[blufor, ""HQ""], ""Four Migs spotted scrambling out of Maxwell!""] remoteExec [""sideChat""];  " \n "        [[blufor, ""HQ""], ""Repeat: Four Migs spotted scrambling out of Maxwell!""] remoteExec [""sideChat""];  " \n "    }; " \n "}];";
 			};
 			id=1049;
 			type="vn_b_air_f4c_bmb";
