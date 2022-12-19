@@ -8,22 +8,22 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=5524;
+		nextID=5758;
 	};
 	class MarkerIDProvider
 	{
-		nextID=50;
+		nextID=58;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1686;
+		nextID=1688;
 	};
 	class Camera
 	{
-		pos[]={15773.396,24.361095,6903.103};
-		dir[]={-0.87680894,-0.45358935,0.15957077};
-		up[]={-0.44625935,0.89121073,0.081214905};
-		aside[]={0.1790494,-7.4505806e-009,0.98384005};
+		pos[]={16325.298,99.380005,8086.2808};
+		dir[]={-0.46965539,-0.61926407,0.62923431};
+		up[]={-0.37041149,0.78518283,0.4962694};
+		aside[]={0.80138576,1.4901161e-008,0.59814787};
 	};
 };
 binarizationWanted=0;
@@ -68,14 +68,13 @@ addons[]=
 	"A3_Structures_F_System",
 	"A3_Misc_F_Helpers",
 	"A3_Structures_F_Items_Vessels",
-	"weapons_f_vietnam_03_c",
-	"static_f_vietnam_02_c"
+	"weapons_f_vietnam_03_c"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=31;
+		items=30;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -286,13 +285,6 @@ class AddonsMetaData
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
-		class Item30
-		{
-			className="static_f_vietnam_02_c";
-			name="static_f_vietnam_02_c";
-			author="Savage Game Design";
-			url="https://www.arma3.com";
-		};
 	};
 };
 class DynamicSimulation
@@ -455,7 +447,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=599;
+		items=635;
 		class Item0
 		{
 			dataType="Marker";
@@ -4950,8 +4942,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4975.3135,445.01956,13609.323};
-						angles[]={0,1.9622399,0};
+						position[]={4973.2065,444.95441,13611.297};
+						angles[]={0,1.1486971,0};
 					};
 					side="Empty";
 					flags=5;
@@ -4961,7 +4953,7 @@ class Mission
 					};
 					id=4943;
 					type="Land_vn_usaf_fueltank_75_01";
-					atlOffset=0.03503418;
+					atlOffset=-0.080352783;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4985,17 +4977,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4973.4595,443.01233,13594.78};
-						angles[]={0,3.0136631,0};
+						position[]={4966.2495,443.00735,13594.563};
+						angles[]={0,1.9991165,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
 					};
 					id=4944;
 					type="Land_vn_us_vehicleammo";
-					atlOffset=0.4597168;
+					atlOffset=0.0089111328;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5360,7 +5353,7 @@ class Mission
 				};
 			};
 			id=804;
-			atlOffset=41.821835;
+			atlOffset=41.819767;
 		};
 		class Item148
 		{
@@ -5778,7 +5771,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17356.953,31.301783,5588.8872};
+				position[]={17355.943,31.301783,5588.0068};
 				angles[]={0,3.4595916,0};
 			};
 			side="Empty";
@@ -5813,18 +5806,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15759.07,17.71804,6907.3818};
-				angles[]={0,6.278543,0};
+				position[]={15759.07,17.718273,6907.3823};
+				angles[]={0,6.2785382,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="this addEventHandler [""GetIn"",  " \n "{  " \n "    private _current_response_team = missionNamespace getVariable ""ATT_CAS_mig_response_team""; " \n "    if (isNil ""_current_response_team"") then " \n "    { " \n "        _maxwell = getMarkerPos ""zone_dharma"";  " \n "        _soc_trang = getMarkerPos ""zone_soc_trang"";  " \n "        _pleiku = getMarkerPos ""marker_pleiku_base"";  " \n "        _migGroup = [[(_maxwell select 0),(_maxwell select 1), 1000], east, (configfile >> ""CfgGroups"" >> ""East"" >> ""VN_PAVN"" >> ""vn_o_group_air_army"" >> ""vn_o_group_air_11"")] call BIS_fnc_spawnGroup;  " \n "        _migGroup reveal [_this, 3.5]; " \n "        _migGroup deleteGroupWhenEmpty true; " \n "        _startWp1 = _migGroup addWaypoint [_soc_trang, 0];  " \n "        _targetWp1 = _migGroup addWaypoint [_pleiku, 1];  " \n "        _targetWp1 setWaypointType ""SAD""; " \n "         " \n "        _migGroup spawn " \n "        { " \n "            { " \n "                _x addEventHandler [""Killed"", " \n "                { " \n "                    [[blufor, ""HQ""], ""Splash one Mig!""] remoteExec [""sideChat""];  " \n "                    deleteVehicle _x; " \n "                }]; " \n "            } foreach units _this; " \n "        }; " \n "         " \n "        missionNamespace setVariable [""ATT_CAS_mig_response_team"", _migGroup, true]; " \n "        [[blufor, ""HQ""], ""Four Migs spotted scrambling out of Maxwell!""] remoteExec [""sideChat""];  " \n "        [[blufor, ""HQ""], ""Repeat: Four Migs spotted scrambling out of Maxwell!""] remoteExec [""sideChat""];  " \n "    }; " \n "}];";
 			};
 			id=1049;
 			type="vn_b_air_f4c_bmb";
-			atlOffset=-0.15100002;
+			atlOffset=-0.15076733;
 		};
 		class Item170
 		{
@@ -12625,7 +12617,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15827.853,14.984387,7110.3535};
+				position[]={15827.853,14.984387,7110.354};
 			};
 			side="Empty";
 			flags=4;
@@ -18527,7 +18519,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14788.499,100.53948,6818.9385};
+								position[]={14789.188,100.53948,6819.2246};
 								angles[]={0,3.8028724,0};
 							};
 							side="Empty";
@@ -18559,7 +18551,7 @@ class Mission
 						};
 					};
 					id=2541;
-					atlOffset=-92.929764;
+					atlOffset=-93.194763;
 				};
 				class Item1
 				{
@@ -19473,40 +19465,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15805.844,17.304922,7138.9897};
-				angles[]={0,5.2188663,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=5083;
-			type="Land_vn_lampshabby_f_dir_normal";
-			atlOffset=-1.4471073;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item451
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={15835.621,15.541324,7150.54};
 				angles[]={0,4.7309942,0};
 			};
@@ -19536,7 +19494,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item452
+		class Item451
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19570,7 +19528,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item453
+		class Item452
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19604,7 +19562,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item454
+		class Item453
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19638,7 +19596,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item455
+		class Item454
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19672,7 +19630,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item456
+		class Item455
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19687,7 +19645,7 @@ class Mission
 			id=5112;
 			type="Land_ClutterCutter_large_F";
 		};
-		class Item457
+		class Item456
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19702,7 +19660,7 @@ class Mission
 			id=5114;
 			type="Land_ClutterCutter_large_F";
 		};
-		class Item458
+		class Item457
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19734,7 +19692,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item459
+		class Item458
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19749,7 +19707,7 @@ class Mission
 			id=5120;
 			type="Land_ClutterCutter_large_F";
 		};
-		class Item460
+		class Item459
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19781,7 +19739,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item461
+		class Item460
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19813,7 +19771,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item462
+		class Item461
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19845,7 +19803,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item463
+		class Item462
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19877,7 +19835,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item464
+		class Item463
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19909,7 +19867,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item465
+		class Item464
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19941,7 +19899,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item466
+		class Item465
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19973,7 +19931,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item467
+		class Item466
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20005,7 +19963,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item468
+		class Item467
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20037,7 +19995,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item469
+		class Item468
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20069,7 +20027,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item470
+		class Item469
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20101,7 +20059,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item471
+		class Item470
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20133,7 +20091,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item472
+		class Item471
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20165,7 +20123,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item473
+		class Item472
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20197,7 +20155,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item474
+		class Item473
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20230,7 +20188,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item475
+		class Item474
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20264,7 +20222,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item476
+		class Item475
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20297,7 +20255,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item477
+		class Item476
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20331,7 +20289,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item478
+		class Item477
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20365,7 +20323,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item479
+		class Item478
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20399,7 +20357,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item480
+		class Item479
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20433,7 +20391,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item481
+		class Item480
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20467,7 +20425,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item482
+		class Item481
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20484,7 +20442,7 @@ class Mission
 			type="Sign_Pointer_Cyan_F";
 			atlOffset=0.78676701;
 		};
-		class Item483
+		class Item482
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20502,7 +20460,7 @@ class Mission
 			type="Sign_Pointer_Cyan_F";
 			atlOffset=0.8021059;
 		};
-		class Item484
+		class Item483
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20519,7 +20477,7 @@ class Mission
 			type="Sign_Pointer_Cyan_F";
 			atlOffset=0.52018452;
 		};
-		class Item485
+		class Item484
 		{
 			dataType="Group";
 			side="West";
@@ -20606,7 +20564,7 @@ class Mission
 			};
 			id=1405;
 		};
-		class Item486
+		class Item485
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20640,7 +20598,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item487
+		class Item486
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20674,7 +20632,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item488
+		class Item487
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20709,7 +20667,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item489
+		class Item488
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20725,7 +20683,7 @@ class Mission
 			id=5204;
 			type="Land_vn_helipadcircle_f";
 		};
-		class Item490
+		class Item489
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20742,7 +20700,7 @@ class Mission
 			type="Land_vn_helipadcircle_f";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item491
+		class Item490
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20758,7 +20716,7 @@ class Mission
 			id=5206;
 			type="Land_vn_helipadcircle_f";
 		};
-		class Item492
+		class Item491
 		{
 			dataType="Marker";
 			position[]={4969.7505,456.50223,13602.975};
@@ -20767,9 +20725,9 @@ class Mission
 			type="mil_dot";
 			colorName="ColorPink";
 			id=5207;
-			atlOffset=12.920593;
+			atlOffset=12.773804;
 		};
-		class Item493
+		class Item492
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20804,12 +20762,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item494
+		class Item493
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4974.4302,444.08142,13606.876};
+				position[]={4974.4897,444.01706,13608.97};
 			};
 			side="Empty";
 			class Attributes
@@ -20817,7 +20775,7 @@ class Mission
 			};
 			id=5214;
 			type="Land_vn_us_common_lantern_01";
-			atlOffset=0.88546753;
+			atlOffset=0.82278442;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20836,7 +20794,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item495
+		class Item494
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20870,7 +20828,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item496
+		class Item495
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20903,7 +20861,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item497
+		class Item496
 		{
 			dataType="Marker";
 			position[]={4973.0952,443.17999,13601.753};
@@ -20913,7 +20871,7 @@ class Mission
 			colorName="ColorYellow";
 			id=5228;
 		};
-		class Item498
+		class Item497
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20929,7 +20887,7 @@ class Mission
 			type="Land_vn_helipadrescue_f";
 			atlOffset=-3.8146973e-006;
 		};
-		class Item499
+		class Item498
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20944,7 +20902,7 @@ class Mission
 			id=5232;
 			type="Land_vn_helipadrescue_f";
 		};
-		class Item500
+		class Item499
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20959,7 +20917,7 @@ class Mission
 			id=5233;
 			type="Land_vn_helipadrescue_f";
 		};
-		class Item501
+		class Item500
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20992,7 +20950,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item502
+		class Item501
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21025,7 +20983,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item503
+		class Item502
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21058,7 +21016,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item504
+		class Item503
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21092,73 +21050,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item505
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15715.223,18.752029,7260.0298};
-				angles[]={0,3.140877,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=5238;
-			type="Land_vn_lampshabby_f_dir_far";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item506
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15713.676,18.752029,7169.6621};
-				angles[]={0,0.013255299,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=5239;
-			type="Land_vn_lampshabby_f_dir_far";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item507
+		class Item504
 		{
 			dataType="Layer";
 			name="live screens";
@@ -21187,7 +21079,7 @@ class Mission
 			id=5248;
 			atlOffset=103.16;
 		};
-		class Item508
+		class Item505
 		{
 			dataType="Layer";
 			name="live screen triggers";
@@ -21205,7 +21097,7 @@ class Mission
 			id=5253;
 			atlOffset=103.16;
 		};
-		class Item509
+		class Item506
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21238,7 +21130,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item510
+		class Item507
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21272,7 +21164,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item511
+		class Item508
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21305,7 +21197,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item512
+		class Item509
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21338,7 +21230,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item513
+		class Item510
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21371,7 +21263,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item514
+		class Item511
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21404,7 +21296,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item515
+		class Item512
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21439,7 +21331,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item516
+		class Item513
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21473,7 +21365,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item517
+		class Item514
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21490,7 +21382,7 @@ class Mission
 			type="vn_b_wheeled_m151_mg_03";
 			atlOffset=0.0007019043;
 		};
-		class Item518
+		class Item515
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21524,7 +21416,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item519
+		class Item516
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21557,7 +21449,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item520
+		class Item517
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21591,7 +21483,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item521
+		class Item518
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21624,7 +21516,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item522
+		class Item519
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21640,7 +21532,7 @@ class Mission
 			id=5338;
 			type="vn_b_wheeled_m151_mg_04";
 		};
-		class Item523
+		class Item520
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21674,7 +21566,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item524
+		class Item521
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21708,7 +21600,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item525
+		class Item522
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21742,7 +21634,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item526
+		class Item523
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21776,7 +21668,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item527
+		class Item524
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21810,7 +21702,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item528
+		class Item525
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21844,7 +21736,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item529
+		class Item526
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21876,7 +21768,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item530
+		class Item527
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21911,7 +21803,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item531
+		class Item528
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21945,7 +21837,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item532
+		class Item529
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21980,12 +21872,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item533
+		class Item530
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14788.513,100.532,6818.9072};
+				position[]={14789.172,100.532,6819.2134};
 				angles[]={0,4.5613132,0};
 			};
 			side="Empty";
@@ -22015,7 +21907,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item534
+		class Item531
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22048,7 +21940,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item535
+		class Item532
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22063,7 +21955,7 @@ class Mission
 			id=5361;
 			type="vn_b_item_cigs_01_gh";
 		};
-		class Item536
+		class Item533
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22078,12 +21970,12 @@ class Mission
 			id=5362;
 			type="vn_b_item_lighter_01_gh";
 		};
-		class Item537
+		class Item534
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14788.013,100.53146,6819.2734};
+				position[]={14788.004,100.53146,6819.2251};
 			};
 			side="Empty";
 			flags=4;
@@ -22112,7 +22004,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item538
+		class Item535
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22145,7 +22037,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item539
+		class Item536
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22180,7 +22072,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item540
+		class Item537
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22215,7 +22107,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item541
+		class Item538
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22250,7 +22142,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item542
+		class Item539
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22283,7 +22175,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item543
+		class Item540
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22316,7 +22208,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item544
+		class Item541
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22351,7 +22243,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item545
+		class Item542
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22385,7 +22277,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item546
+		class Item543
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22419,7 +22311,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item547
+		class Item544
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22452,7 +22344,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item548
+		class Item545
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22485,7 +22377,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item549
+		class Item546
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22519,7 +22411,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item550
+		class Item547
 		{
 			dataType="Group";
 			side="Civilian";
@@ -22608,40 +22500,7 @@ class Mission
 			};
 			id=5425;
 		};
-		class Item551
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15696.228,17.656429,7091.5269};
-				angles[]={0,2.083755,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=5428;
-			type="vn_b_air_f100d_cap";
-		};
-		class Item552
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15695.485,17.656425,7069.6987};
-				angles[]={0,2.083755,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=5429;
-			type="vn_b_air_f100d_cap";
-			atlOffset=-3.8146973e-006;
-		};
-		class Item553
+		class Item548
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22658,7 +22517,7 @@ class Mission
 			type="vn_b_air_f100d_cap";
 			atlOffset=-3.8146973e-006;
 		};
-		class Item554
+		class Item549
 		{
 			dataType="Marker";
 			position[]={21396.023,0,13603.648};
@@ -22668,7 +22527,7 @@ class Mission
 			id=5433;
 			atlOffset=87.384377;
 		};
-		class Item555
+		class Item550
 		{
 			dataType="Marker";
 			position[]={21396.023,0,13406.713};
@@ -22678,7 +22537,7 @@ class Mission
 			id=5434;
 			atlOffset=86.438774;
 		};
-		class Item556
+		class Item551
 		{
 			dataType="Marker";
 			position[]={21396.023,0,13203.235};
@@ -22688,22 +22547,23 @@ class Mission
 			id=5435;
 			atlOffset=88.707581;
 		};
-		class Item557
+		class Item552
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14826.73,99.655678,6795.4707};
-				angles[]={0,4.8772178,0};
+				position[]={14788.69,99.667,6819.6548};
+				angles[]={0,1.7588905,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				description="Trophy Crate";
 			};
-			id=5471;
+			id=5565;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.015686035;
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22715,972 +22575,454 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
-				class Attribute1
+				nAttributes=1;
+			};
+		};
+		class Item553
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14788.618,99.667,6819.2681};
+				angles[]={0,1.7588905,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				description="Trophy Crate";
+			};
+			id=5566;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
 					class Value
 					{
 						class data
 						{
-							singleType="BOOL";
-							value=0;
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
+		};
+		class Item554
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14788.549,99.667,6818.9238};
+				angles[]={0,1.7588905,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				description="Trophy Crate";
+			};
+			id=5567;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item555
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15774.595,15.179544,7129.1826};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=5573;
+			type="Land_vn_b_mortarpit_01";
+		};
+		class Item556
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15854.762,15.179544,7124.3394};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=5574;
+			type="Land_vn_b_mortarpit_01";
+		};
+		class Item557
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15854.528,17.226025,7124.1094};
+				angles[]={0,3.0679419,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5575;
+			type="vn_b_army_static_m45";
+			atlOffset=0.30917549;
 		};
 		class Item558
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14826.797,99.648788,6795.8877};
-				angles[]={0,4.8772178,0};
+				position[]={15774.322,17.227974,7128.9761};
+				angles[]={0,3.2248659,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
-			id=5475;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0087966919;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5576;
+			type="vn_b_army_static_m45";
+			atlOffset=0.3111248;
 		};
 		class Item559
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14826.597,99.642036,6794.665};
-				angles[]={0,4.8772178,0};
+				position[]={15775.448,15.474412,7131.1646};
+				angles[]={0,0.56406122,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5476;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0024490356;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5577;
+			type="vn_b_prop_prc77_01";
+			atlOffset=0.1441021;
 		};
 		class Item560
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14826.662,99.648178,6795.0708};
-				angles[]={0,4.8772178,0};
+				position[]={15853.042,15.293179,7124.1938};
+				angles[]={0,4.8897409,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
-			id=5477;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0081863403;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5579;
+			type="vn_b_prop_prc77_01";
+			atlOffset=0.31286907;
 		};
 		class Item561
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14826.731,99.863815,6795.4707};
-				angles[]={0,4.8772178,0};
+				position[]={14788.392,100.53159,6818.9648};
+				angles[]={0,0.22560124,0};
 			};
 			side="Empty";
+			flags=5;
 			class Attributes
 			{
 			};
-			id=5478;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22382355;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5583;
+			type="Land_vn_photos_v4_f";
 		};
 		class Item562
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14826.798,99.86174,6795.8877};
-				angles[]={0,4.8772178,0};
+				position[]={14788.486,100.54062,6818.9038};
+				angles[]={0,0.50480157,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
-			id=5479;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22174835;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5584;
+			type="Land_vn_file1_f";
+			atlOffset=0.00040435791;
 		};
 		class Item563
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14826.598,99.858131,6794.665};
-				angles[]={0,4.8772178,0};
+				position[]={14788.405,100.55499,6819.6089};
+				angles[]={0,5.3249297,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
-			id=5480;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.21854401;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5592;
+			type="vn_weapon_acc_s_m14";
+			atlOffset=0.023399353;
 		};
 		class Item564
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14826.663,99.861565,6795.0708};
-				angles[]={0,4.8772178,0};
+				position[]={14788.176,100.55703,6819.3916};
+				angles[]={0,5.3534985,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5481;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22157288;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5593;
+			type="vn_weapon_acc_o_4x_m16";
+			atlOffset=0.025436401;
 		};
 		class Item565
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14824.76,99.653946,6795.7852};
-				angles[]={0,4.8772178,0};
+				position[]={14853.99,99.728851,6870.5547};
+				angles[]={0,3.4078853,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5490;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.013954163;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5622;
+			type="vn_b_ammobox_full_07";
+			atlOffset=-0.010665894;
 		};
 		class Item566
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14824.826,99.647057,6796.2021};
-				angles[]={0,4.8772178,0};
+				position[]={14853.456,100.42719,6870.3506};
+				angles[]={6.2047424,0,0.020641442};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5491;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0070648193;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5623;
+			type="vn_b_prop_fmradio_01";
+			atlOffset=0.073699951;
 		};
 		class Item567
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14824.626,99.640305,6794.9795};
-				angles[]={0,4.8772178,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=5492;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.00031280518;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			dataType="Marker";
+			position[]={14851.747,99.695,6870.3311};
+			name="marker_53";
+			text="S - 4";
+			type="mil_dot";
+			colorName="ColorWEST";
+			alpha=0.81345302;
+			id=5624;
+			atlOffset=0.00036621094;
 		};
 		class Item568
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14824.691,99.646446,6795.3853};
-				angles[]={0,4.8772178,0};
+				position[]={17357.215,31.367189,5538.481};
+				angles[]={0,3.1749833,0};
 			};
 			side="Empty";
-			flags=4;
+			flags=1;
 			class Attributes
 			{
 			};
-			id=5493;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0064544678;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5625;
+			type="vn_sign_fob_08";
+			atlOffset=2.0657253;
 		};
 		class Item569
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14824.761,99.862083,6795.7852};
-				angles[]={0,4.8772178,0};
+				position[]={17358.514,29.283844,5533.9087};
+				angles[]={0,4.730269,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5494;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22209167;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5626;
+			type="vn_b_ammobox_full_07";
+			atlOffset=0.014835358;
 		};
 		class Item570
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14824.827,99.860008,6796.2021};
-				angles[]={0,4.8772178,0};
+				position[]={17358.332,29.913155,5534.4019};
+				angles[]={0.079825565,1.3854752,0.014292629};
 			};
 			side="Empty";
 			class Attributes
 			{
 			};
-			id=5495;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22001648;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5627;
+			type="vn_b_prop_fmradio_01";
+			atlOffset=0.26088524;
 		};
 		class Item571
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14824.627,99.8564,6794.9795};
-				angles[]={0,4.8772178,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5496;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.21640778;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			dataType="Marker";
+			position[]={17357.082,29.200001,5536.144};
+			name="marker_54";
+			text="S - 4";
+			type="mil_dot";
+			colorName="ColorWEST";
+			id=5628;
+			atlOffset=-0.00039291382;
 		};
 		class Item572
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14824.692,99.859833,6795.3853};
-				angles[]={0,4.8772178,0};
+				position[]={16111.024,15.482214,7144.7427};
+				angles[]={0,1.7016617,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5497;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.219841;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5630;
+			type="vn_b_ammobox_full_07";
 		};
 		class Item573
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14822.85,99.653946,6796.0986};
-				angles[]={0,4.8772178,0};
+				position[]={16111.15,15.850638,7145.4668};
+				angles[]={0,5.1052446,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5498;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.013954163;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5632;
+			type="vn_b_prop_fmradio_01";
 		};
 		class Item574
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14822.916,99.647057,6796.5156};
-				angles[]={0,4.8772178,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=5499;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0070648193;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			dataType="Marker";
+			position[]={16111.486,15.18,7143.499};
+			name="marker_55";
+			text="S - 4";
+			type="mil_dot";
+			colorName="ColorWEST";
+			id=5633;
 		};
 		class Item575
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14822.716,99.640305,6795.293};
-				angles[]={0,4.8772178,0};
+				position[]={16336.118,74.652931,8087.5972};
+				angles[]={0,5.1325316,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5500;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.00031280518;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5634;
+			type="vn_b_ammobox_full_07";
 		};
 		class Item576
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14822.781,99.646446,6795.6987};
-				angles[]={0,4.8772178,0};
+				position[]={16336.158,75.313622,8086.9819};
+				angles[]={6.2830939,2.731005,6.2020574};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
-			id=5501;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0064544678;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			id=5635;
+			type="vn_b_prop_fmradio_01";
+			atlOffset=0.65823364;
 		};
 		class Item577
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14822.851,99.862083,6796.0986};
-				angles[]={0,4.8772178,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=5502;
-			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22209167;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
+			dataType="Marker";
+			position[]={16335.656,74.510002,8090.6841};
+			name="marker_56";
+			text="S - 4";
+			type="mil_dot";
+			colorName="ColorWEST";
+			id=5636;
 		};
 		class Item578
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14822.917,99.860008,6796.5156};
-				angles[]={0,4.8772178,0};
+				position[]={14857.09,99.810997,6868.6592};
+				angles[]={0,0.23169111,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5503;
+			id=5641;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22001648;
+			atlOffset=0.022491455;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23717,16 +23059,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14822.717,99.8564,6795.293};
-				angles[]={0,4.8772178,0};
+				position[]={14857.501,99.804108,6868.564};
+				angles[]={0,0.23169111,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5504;
+			id=5642;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.21640778;
+			atlOffset=0.015602112;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23763,16 +23106,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14822.782,99.859833,6795.6987};
-				angles[]={0,4.8772178,0};
+				position[]={14856.45,99.797356,6868.9502};
+				angles[]={0,1.7858263,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5505;
+			id=5643;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.219841;
+			atlOffset=0.0088500977;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23809,17 +23153,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14820.769,99.653946,6796.4355};
-				angles[]={0,4.8772178,0};
+				position[]={14856.364,99.803497,6868.5483};
+				angles[]={0,1.7858263,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5506;
+			id=5644;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.013954163;
+			atlOffset=0.011169434;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23856,17 +23200,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14820.835,99.647057,6796.8525};
-				angles[]={0,4.8772178,0};
+				position[]={14856.857,99.805969,6867.6094};
+				angles[]={0,0.23169111,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5507;
+			id=5646;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0070648193;
+			atlOffset=0.013641357;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23903,17 +23247,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14820.635,99.640305,6795.6299};
-				angles[]={0,4.8772178,0};
+				position[]={14857.269,99.79908,6867.5142};
+				angles[]={0,0.23169111,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5508;
+			id=5647;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.00031280518;
+			atlOffset=0.0067520142;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23950,17 +23294,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14820.7,99.646446,6796.0356};
-				angles[]={0,4.8772178,0};
+				position[]={14855.653,99.792328,6870.1567};
+				angles[]={0,0.24759404,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5509;
+			id=5648;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0064544678;
+			atlOffset=0.0059890747;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23997,16 +23341,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14820.77,99.862083,6796.4355};
-				angles[]={0,4.8772178,0};
+				position[]={14856.344,99.79847,6871.0879};
+				angles[]={0,1.0353971,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5510;
+			id=5649;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22209167;
+			atlOffset=0.012130737;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24043,16 +23388,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14820.836,99.860008,6796.8525};
-				angles[]={0,4.8772178,0};
+				position[]={16111.53,15.504292,7147.2134};
+				angles[]={0,6.2185574,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5511;
+			id=5650;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22001648;
+			atlOffset=0.020834923;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24089,16 +23435,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14820.636,99.8564,6795.6299};
-				angles[]={0,4.8772178,0};
+				position[]={16113.155,15.490651,7148.3232};
+				angles[]={0,1.5214621,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5512;
+			id=5651;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.21640778;
+			atlOffset=0.007194519;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24135,16 +23482,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14820.701,99.859833,6796.0356};
-				angles[]={0,4.8772178,0};
+				position[]={16113.178,15.496793,7147.9131};
+				angles[]={0,1.5214621,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5513;
+			id=5652;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.219841;
+			atlOffset=0.013336182;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24181,17 +23529,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14818.854,99.653946,6796.7368};
-				angles[]={0,4.8772178,0};
+				position[]={16110.94,15.499265,7146.4404};
+				angles[]={0,4.6694441,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5514;
+			id=5653;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.013954163;
+			atlOffset=0.015808105;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24228,17 +23576,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14818.921,99.647057,6797.1538};
-				angles[]={0,4.8772178,0};
+				position[]={16109.892,15.492375,7146.689};
+				angles[]={0,5.0630827,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5515;
+			id=5654;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0070648193;
+			atlOffset=0.0089187622;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24275,17 +23623,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14818.721,99.640305,6795.9312};
-				angles[]={0,4.8772178,0};
+				position[]={16112.082,15.485623,7148.2554};
+				angles[]={0,1.5214621,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5516;
+			id=5655;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.00031280518;
+			atlOffset=0.002166748;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24322,17 +23670,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14818.786,99.646446,6796.3369};
-				angles[]={0,4.8772178,0};
+				position[]={16112.104,15.491765,7147.8452};
+				angles[]={0,1.5214621,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5517;
+			id=5656;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.0064544678;
+			atlOffset=0.0083084106;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24369,16 +23717,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14818.855,99.862083,6796.7368};
-				angles[]={0,4.8772178,0};
+				position[]={16111.969,15.483457,7147.2471};
+				angles[]={0,6.2185574,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5518;
+			id=5657;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22209167;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24415,16 +23763,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14818.922,99.860008,6797.1538};
-				angles[]={0,4.8772178,0};
+				position[]={16333.933,74.675011,8085.4248};
+				angles[]={0,3.4488077,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5519;
+			id=5658;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.22001648;
+			atlOffset=0.020835876;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24461,16 +23810,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14818.722,99.8564,6795.9312};
-				angles[]={0,4.8772178,0};
+				position[]={16332.288,74.661369,8084.9556};
+				angles[]={0,5.0565505,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5520;
+			id=5659;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.21640778;
+			atlOffset=0.007194519;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24507,16 +23857,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14818.787,99.859833,6796.3369};
-				angles[]={0,4.8772178,0};
+				position[]={16332.424,74.667511,8085.3428};
+				angles[]={0,5.0565505,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5521;
+			id=5660;
 			type="vn_b_ammobox_supply_12";
-			atlOffset=0.219841;
+			atlOffset=0.013336182;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24553,43 +23904,1293 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15774.683,16.756138,7140.2568};
+				position[]={16335.167,74.669983,8086.0913};
+				angles[]={0,1.8271534,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5522;
-			type="vn_b_navy_static_l60mk3";
-			atlOffset=-9.5367432e-007;
+			id=5661;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.015808105;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 		class Item598
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15855.16,16.756138,7128.2959};
+				position[]={16336.032,74.663094,8085.4331};
+				angles[]={0,2.7157805,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5523;
-			type="vn_b_navy_static_l60mk3";
-			atlOffset=-9.5367432e-007;
+			id=5662;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0089187622;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item599
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16333.305,74.656342,8084.6064};
+				angles[]={0,5.0565505,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5663;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.002166748;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item600
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16333.441,74.662483,8084.9941};
+				angles[]={0,5.0565505,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5664;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0083084106;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item601
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16333.512,74.654175,8085.5518};
+				angles[]={0,3.4488077,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5665;
+			type="vn_b_ammobox_supply_12";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item602
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17356.875,29.320755,5530.4639};
+				angles[]={0,1.6153563,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5666;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.021972656;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item603
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17357.123,29.307114,5531.1475};
+				angles[]={0,3.1804428,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5667;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0083312988;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item604
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17356.713,29.313255,5531.1606};
+				angles[]={0,3.1804428,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5668;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.014472961;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item605
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17355.801,29.315727,5530.4971};
+				angles[]={0,1.6153563,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5669;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.016944885;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item606
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17355.783,29.308838,5530.0752};
+				angles[]={0,1.6153563,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5670;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.010055542;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item607
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17358.135,29.302086,5532.0801};
+				angles[]={0,1.621442,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5671;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0013923645;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item608
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17359.141,29.308228,5531.6914};
+				angles[]={0,2.2378883,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5672;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0075340271;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item609
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17356.861,29.299919,5530.0244};
+				angles[]={0,1.6153563,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5673;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.0011367798;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item610
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15822.854,15.630425,7100.2749};
+				angles[]={0,3.3777008,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=5674;
+			type="Land_vn_noticeboard_f";
+			atlOffset=-0.14099979;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="img\qr.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item611
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17358.295,31.915424,5588.0562};
+				angles[]={0,3.1568294,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=5675;
+			type="Land_vn_noticeboard_f";
+			atlOffset=-0.1060009;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="img\qr.paa";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item612
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16325.298,75.171432,8111.2808};
+				angles[]={0,3.4269016,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=5677;
+			type="Land_vn_noticeboard_f";
+			atlOffset=-0.12999725;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="img\qr.paa";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item613
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16324.696,74.51001,8111.6353};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5678;
+			type="Land_vn_us_common_lantern_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item614
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17357.664,31.230009,5588.5303};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5679;
+			type="Land_vn_us_common_lantern_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item615
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15822.397,14.980009,7100.8003};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5680;
+			type="Land_vn_us_common_lantern_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item616
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14792.773,100.28542,6838.7559};
+				angles[]={0,4.8660131,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=5681;
+			type="Land_vn_noticeboard_f";
+			atlOffset=-0.096000671;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="img\qr.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item617
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14793.329,99.590004,6839.2334};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5682;
+			type="Land_vn_us_common_lantern_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item618
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4973.2988,443.64093,13602.035};
+				angles[]={6.2821178,0.38884163,6.2787585};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5685;
+			type="Land_vn_b_helipad_01";
+			atlOffset=0.085662842;
+		};
+		class Item619
+		{
+			dataType="Layer";
+			name="Weapon workshop";
+			id=5740;
+			atlOffset=103.16;
+		};
+		class Item620
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4892.1377,456.70456,13643.701};
+				angles[]={0,5.3583941,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5741;
+			type="vn_b_ammobox_full_07";
+			atlOffset=0.0089416504;
+		};
+		class Item621
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4892.6338,457.05603,13644.236};
+				angles[]={0,3.7209189,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5742;
+			type="vn_b_prop_fmradio_01";
+			atlOffset=0.35794067;
+		};
+		class Item622
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4894.0244,456.67398,13645.172};
+				angles[]={0,3.8316114,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5744;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.14398193;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item623
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4893.7065,456.68011,13645.431};
+				angles[]={0,3.8316114,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5745;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.15011597;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item624
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4894.6978,456.66895,13646.01};
+				angles[]={0,3.8316114,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5746;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.13894653;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item625
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4894.3784,456.67508,13646.271};
+				angles[]={0,3.8316114,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5747;
+			type="vn_b_ammobox_supply_12";
+			atlOffset=0.14508057;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""vn_m127"",""vn_m1911_sd""],[1,2]],[[""vn_prop_drink_08_01"",""vn_prop_drink_09_01"",""vn_b_item_cigs_01"",""vn_b_item_lighter_01"",""vn_type56_mag"",""vn_m16_30_mag"",""vn_m129_mag"",""vn_m1911_mag"",""vn_mine_m14_mag"",""vn_mine_lighter_mag"",""vn_mine_m18_range_mag"",""vn_mine_m112_remote_mag"",""vn_prop_med_antivenom"",""vn_prop_med_dysentery"",""vn_prop_drink_02"",""vn_prop_food_lrrp_01_01"",""vn_prop_food_lrrp_01_03"",""vn_prop_food_lrrp_01_04"",""vn_prop_food_lrrp_01_06"",""vn_prop_food_lrrp_01_07"",""vn_prop_food_lrrp_01_08"",""vn_prop_food_can_01_11"",""vn_b_item_gunoil_01"",""SmokeShell"",""SmokeShellYellow"",""SmokeShellPurple""],[12,6,12,6,10,10,2,12,5,10,2,2,6,6,6,1,1,1,1,1,1,6,6,2,1,1]],[[""vn_b_item_firstaidkit"",""vn_b_item_compass"",""vn_b_item_map"",""vn_b_item_medikit_01""],[10,1,1,2]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item626
+		{
+			dataType="Marker";
+			position[]={4892.73,456.53,13645.646};
+			name="marker_57";
+			text="S - 4";
+			type="mil_dot";
+			colorName="ColorWEST";
+			id=5748;
+		};
+		class Item627
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15695.101,17.656433,7063.0117};
+				angles[]={0,2.083755,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5428;
+			type="vn_b_air_f100d_cap";
+			atlOffset=3.8146973e-006;
+		};
+		class Item628
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15814.081,16.502253,7238.4067};
+				angles[]={0,0.047640551,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5750;
+			type="vn_b_wheeled_m151_01_nz_army";
+		};
+		class Item629
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15817.391,16.502253,7238.2656};
+				angles[]={0,6.2195129,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5751;
+			type="vn_b_wheeled_m151_02_nz_army";
+		};
+		class Item630
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15824.103,16.502253,7237.2192};
+				angles[]={0,1.5810459,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5752;
+			type="vn_b_wheeled_m151_02_nz_army";
+		};
+		class Item631
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15828.182,16.502253,7242.5225};
+				angles[]={0,3.0854173,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5754;
+			type="vn_b_wheeled_m151_01_nz_army";
+		};
+		class Item632
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15823.471,16.502253,7245.7051};
+				angles[]={0,4.6851015,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5755;
+			type="vn_b_wheeled_m151_01_nz_army";
+		};
+		class Item633
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15819.778,16.460943,7240.9341};
+				angles[]={0,6.1567187,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5756;
+			type="vn_o_bicycle_01_pl";
+		};
+		class Item634
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15823.841,16.460943,7241.2402};
+				angles[]={0,5.1747007,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5757;
+			type="vn_o_bicycle_01_pl";
 		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=116;
+			nextID=120;
 		};
 		class Links
 		{
-			items=116;
+			items=120;
 			class Item0
 			{
 				linkID=0;
@@ -25593,8 +26194,8 @@ class Mission
 			class Item100
 			{
 				linkID=100;
-				item0=5268;
-				item1=823;
+				item0=5273;
+				item1=705;
 				class CustomData
 				{
 					type="Sync";
@@ -25603,7 +26204,7 @@ class Mission
 			class Item101
 			{
 				linkID=101;
-				item0=5273;
+				item0=5272;
 				item1=705;
 				class CustomData
 				{
@@ -25613,7 +26214,7 @@ class Mission
 			class Item102
 			{
 				linkID=102;
-				item0=5272;
+				item0=5274;
 				item1=705;
 				class CustomData
 				{
@@ -25623,7 +26224,7 @@ class Mission
 			class Item103
 			{
 				linkID=103;
-				item0=5274;
+				item0=5270;
 				item1=705;
 				class CustomData
 				{
@@ -25633,7 +26234,7 @@ class Mission
 			class Item104
 			{
 				linkID=104;
-				item0=5270;
+				item0=5271;
 				item1=705;
 				class CustomData
 				{
@@ -25643,7 +26244,7 @@ class Mission
 			class Item105
 			{
 				linkID=105;
-				item0=5271;
+				item0=5298;
 				item1=705;
 				class CustomData
 				{
@@ -25653,7 +26254,7 @@ class Mission
 			class Item106
 			{
 				linkID=106;
-				item0=5298;
+				item0=5306;
 				item1=705;
 				class CustomData
 				{
@@ -25663,7 +26264,7 @@ class Mission
 			class Item107
 			{
 				linkID=107;
-				item0=5306;
+				item0=5265;
 				item1=705;
 				class CustomData
 				{
@@ -25673,7 +26274,7 @@ class Mission
 			class Item108
 			{
 				linkID=108;
-				item0=5265;
+				item0=5338;
 				item1=705;
 				class CustomData
 				{
@@ -25683,7 +26284,7 @@ class Mission
 			class Item109
 			{
 				linkID=109;
-				item0=5338;
+				item0=5411;
 				item1=705;
 				class CustomData
 				{
@@ -25693,7 +26294,7 @@ class Mission
 			class Item110
 			{
 				linkID=110;
-				item0=5411;
+				item0=5396;
 				item1=705;
 				class CustomData
 				{
@@ -25703,7 +26304,7 @@ class Mission
 			class Item111
 			{
 				linkID=111;
-				item0=5396;
+				item0=5410;
 				item1=705;
 				class CustomData
 				{
@@ -25713,7 +26314,7 @@ class Mission
 			class Item112
 			{
 				linkID=112;
-				item0=5410;
+				item0=5428;
 				item1=705;
 				class CustomData
 				{
@@ -25723,7 +26324,7 @@ class Mission
 			class Item113
 			{
 				linkID=113;
-				item0=5428;
+				item0=5430;
 				item1=705;
 				class CustomData
 				{
@@ -25733,8 +26334,8 @@ class Mission
 			class Item114
 			{
 				linkID=114;
-				item0=5429;
-				item1=705;
+				item0=5268;
+				item1=823;
 				class CustomData
 				{
 					type="Sync";
@@ -25743,7 +26344,47 @@ class Mission
 			class Item115
 			{
 				linkID=115;
-				item0=5430;
+				item0=5755;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item116
+			{
+				linkID=116;
+				item0=5754;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item117
+			{
+				linkID=117;
+				item0=5752;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item118
+			{
+				linkID=118;
+				item0=5751;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item119
+			{
+				linkID=119;
+				item0=5750;
 				item1=705;
 				class CustomData
 				{
