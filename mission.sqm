@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1829;
+		nextID=1897;
 	};
 	class Camera
 	{
-		pos[]={16440.504,39.98,6780.7837};
-		dir[]={-0.34653443,-0.11165916,0.93136907};
-		up[]={-0.038937692,0.99374604,0.10465159};
-		aside[]={0.93723029,-1.2980308e-008,0.34871498};
+		pos[]={19058.904,25,193.50464};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -347,14 +347,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -398,14 +398,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -1128,17 +1128,17 @@ class Mission
 		class Item57
 		{
 			dataType="Marker";
-			position[]={14500.624,26.909246,1682.8512};
+			position[]={14618.147,26.90918,1895.1495};
 			name="zone_soc_trang";
 			text="SOC TRANG";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
-			a=-600;
-			b=-600;
+			a=-1000;
+			b=-1000;
 			drawBorder=1;
 			id=249;
-			atlOffset=3.5692463;
+			atlOffset=-6.8322868;
 		};
 		class Item58
 		{
@@ -1869,7 +1869,7 @@ class Mission
 			type="mil_arrow";
 			angle=11.032681;
 			id=423;
-			atlOffset=15.831757;
+			atlOffset=22.251999;
 		};
 		class Item88
 		{
@@ -24042,7 +24042,7 @@ class Mission
 			};
 			id=5685;
 			type="Land_vn_b_helipad_01";
-			atlOffset=0.086303711;
+			atlOffset=0.085662842;
 		};
 		class Item590
 		{
