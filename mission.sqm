@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2169;
+		nextID=2237;
 	};
 	class Camera
 	{
@@ -65,13 +65,11 @@ addons[]=
 	"A3_Structures_F_System",
 	"A3_Misc_F_Helpers",
 	"A3_Structures_F_Items_Vessels",
-	"cba_xeh",
 	"static_f_vietnam_c",
 	"weapons_f_vietnam_03_c",
 	"vegetation_f_vietnam_c",
 	"characters_f_vietnam_03_c",
 	"A3_Structures_F_Walls",
-	"emr_main",
 	"A3_Structures_F_Exp_Walls_Concrete",
 	"A3_Structures_F_Exp_Walls_BackAlleys",
 	"static_f_vietnam_03_c",
@@ -81,7 +79,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=34;
+		items=33;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -294,26 +292,19 @@ class AddonsMetaData
 		};
 		class Item30
 		{
-			className="emr_main";
-			name="Enhanced Movement Rework";
-			author="Simplex Team";
-			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
-		};
-		class Item31
-		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item32
+		class Item31
 		{
 			className="static_f_vietnam_03_c";
 			name="static_f_vietnam_03_c";
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
-		class Item33
+		class Item32
 		{
 			className="sounds_f_vietnam_c";
 			name="sounds_f_vietnam_c";
@@ -375,14 +366,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -426,14 +417,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -443,19 +434,6 @@ class CustomAttributes
 	{
 		name="Scenario";
 		class Attribute0
-		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="EnableDebugConsole";
 			expression="true";
@@ -468,7 +446,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		nAttributes=1;
 	};
 };
 class Mission
@@ -1898,7 +1876,7 @@ class Mission
 			type="mil_arrow";
 			angle=11.032681;
 			id=423;
-			atlOffset=22.251999;
+			atlOffset=15.831757;
 		};
 		class Item87
 		{
@@ -19672,7 +19650,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4943.6509,453.82999,13642.231};
-				angles[]={-0,1.5766804,0};
+				angles[]={0,1.5766804,0};
 			};
 			side="Empty";
 			flags=4;
