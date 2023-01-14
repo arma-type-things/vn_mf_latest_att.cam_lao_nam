@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2101;
+		nextID=2169;
 	};
 	class Camera
 	{
-		pos[]={16200.279,56.850899,6565.5728};
-		dir[]={-0.11921567,-0.99069703,0.066728331};
-		up[]={-0.86443925,0.13647135,0.48385084};
-		aside[]={0.48845556,4.7148205e-007,0.87266481};
+		pos[]={4965.7168,461.58795,13637.765};
+		dir[]={-0.93151891,-0.21135221,0.29602674};
+		up[]={-0.2014363,0.9774074,0.064014062};
+		aside[]={0.30286926,1.4543184e-007,0.95305008};
 	};
 };
 binarizationWanted=0;
@@ -65,11 +65,13 @@ addons[]=
 	"A3_Structures_F_System",
 	"A3_Misc_F_Helpers",
 	"A3_Structures_F_Items_Vessels",
+	"cba_xeh",
 	"static_f_vietnam_c",
 	"weapons_f_vietnam_03_c",
 	"vegetation_f_vietnam_c",
 	"characters_f_vietnam_03_c",
 	"A3_Structures_F_Walls",
+	"emr_main",
 	"A3_Structures_F_Exp_Walls_Concrete",
 	"A3_Structures_F_Exp_Walls_BackAlleys",
 	"static_f_vietnam_03_c",
@@ -79,7 +81,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=33;
+		items=34;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -292,19 +294,26 @@ class AddonsMetaData
 		};
 		class Item30
 		{
+			className="emr_main";
+			name="Enhanced Movement Rework";
+			author="Simplex Team";
+			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
+		};
+		class Item31
+		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item31
+		class Item32
 		{
 			className="static_f_vietnam_03_c";
 			name="static_f_vietnam_03_c";
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
-		class Item32
+		class Item33
 		{
 			className="sounds_f_vietnam_c";
 			name="sounds_f_vietnam_c";
@@ -366,14 +375,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -417,14 +426,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -434,6 +443,19 @@ class CustomAttributes
 	{
 		name="Scenario";
 		class Attribute0
+		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
 		{
 			property="EnableDebugConsole";
 			expression="true";
@@ -446,7 +468,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		nAttributes=2;
 	};
 };
 class Mission
@@ -1876,7 +1898,7 @@ class Mission
 			type="mil_arrow";
 			angle=11.032681;
 			id=423;
-			atlOffset=15.831757;
+			atlOffset=22.251999;
 		};
 		class Item87
 		{
@@ -19612,7 +19634,7 @@ class Mission
 			flags=1;
 			id=6319;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=1.7540894;
+			atlOffset=1.8688965;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19649,8 +19671,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4943.6509,453.94568,13642.231};
-				angles[]={6.2791891,1.5766804,2.3515895e-005};
+				position[]={4943.6509,453.82999,13642.231};
+				angles[]={-0,1.5766804,0};
 			};
 			side="Empty";
 			flags=4;
@@ -19659,7 +19681,6 @@ class Mission
 			};
 			id=6320;
 			type="Land_vn_b_helipad_01";
-			atlOffset=0.11569214;
 		};
 		class Item584
 		{
@@ -20060,17 +20081,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4944.0542,456.81509,13644.44};
-				angles[]={0.0039968039,3.1027241,0.00015707963};
+				position[]={4944.0542,457.18332,13644.44};
+				angles[]={0,3.172544,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=6349;
 			type="vn_b_air_uh1d_02_07";
-			atlOffset=0.0024414063;
+			atlOffset=0.49520874;
 		};
 		class Item597
 		{
