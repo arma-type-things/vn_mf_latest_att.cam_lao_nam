@@ -269,6 +269,20 @@ class vn_b_air_f4b_navy_gbu : respawn_long {};
 class vn_b_air_f4b_navy_cbu : respawn_long {};
 class vn_b_air_f4b_navy_sead : respawn_long {};
 
+//F100 aircraft
+class vn_b_air_f100d_at : respawn_long {};
+class vn_b_air_f100d_bmb : respawn_long {};
+class vn_b_air_f100d_cap : respawn_long {};
+class vn_b_air_f100d_cas : respawn_long {};
+class vn_b_air_f100d_cbu : respawn_long {};
+class vn_b_air_f100d_ehcas : respawn_long {};
+class vn_b_air_f100d_hbmb : respawn_long {};
+class vn_b_air_f100d_hcas : respawn_long {};
+class vn_b_air_f100d_lbmb : respawn_long {};
+class vn_b_air_f100d_mbmb : respawn_long {};
+class vn_b_air_f100d_mr : respawn_long {};
+class vn_b_air_f100d_sead : respawn_long {};
+
 //Howitzer
 class vn_b_army_static_m101_02 : respawn_short {};
 class vn_b_sf_static_m101_02 : respawn_short {};

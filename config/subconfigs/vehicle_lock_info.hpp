@@ -258,6 +258,20 @@ class vn_b_air_f4b_navy_gbu : green_hornet {};
 class vn_b_air_f4b_navy_cbu : green_hornet {};
 class vn_b_air_f4b_navy_sead : green_hornet {};
 
+//F100D aircraft
+class vn_b_air_f100d_at : green_hornet {};
+class vn_b_air_f100d_bmb : green_hornet {};
+class vn_b_air_f100d_cap : green_hornet {};
+class vn_b_air_f100d_cas : green_hornet {};
+class vn_b_air_f100d_cbu : green_hornet {};
+class vn_b_air_f100d_ehcas : green_hornet {};
+class vn_b_air_f100d_hbmb : green_hornet {};
+class vn_b_air_f100d_hcas : green_hornet {};
+class vn_b_air_f100d_lbmb : green_hornet {};
+class vn_b_air_f100d_mbmb : green_hornet {};
+class vn_b_air_f100d_mr : green_hornet {};
+class vn_b_air_f100d_sead : green_hornet {};
+
 //Howitzer
 class vn_b_army_static_m101_02 : acav {};
 class vn_b_sf_static_m101_02 : acav {};
