@@ -64,22 +64,6 @@ if !(_object_data isEqualTo []) then
 	} forEach _object_data;
 };
 
-// ATT OPFOR enforcement
-// get slot identifier
-private _slot = vehicleVarName _player;
-
-// ATT OPFOR Whitelist
-private _att_opfor_whitelist = serverNamespace getVariable "att_opfor_whitelist";
-// Slot identifiers for OPFOR slots
-private _att_reserved_slots = serverNamespace getVariable "att_reserved_slots";
-
-if (_slot in _att_reserved_slots) then {
-	if (! _uid in _att_opfor_whitelist) then {
-		[["This slot is reserved; see our Discord for more information"], "BIS_fnc_infoText", _player, false] call BIS_fnc_MP;
-		sleep 1;
-		["ReservedSlot"] remoteExec ["endMission", _player];
-	}
-};
 
 // set new enlisted number
 private _enlisted = _player getVariable ["vn_mf_db_serial","0"];
@@ -94,18 +78,10 @@ if (_enlisted isEqualTo "0") then {
 
 };
 
-switch (true) do {
-	case (_slot in _att_opfor_whitelist): {
-		[_player, "DacCong"] call vn_mf_fnc_force_team_change;
-	};
-	default {
-		// last group, or if not one assign MikeForce
-		private _lastTeamName = _player getVariable ["vn_mf_db_player_group", "MikeForce"];
-		// Attempt team change, defaulting to MikeForce is team is full.
-		[_player, _lastTeamName, "DEFAULT"] call vn_mf_fnc_change_team;
-	};
-};
-
+// last group, or if not one assign MikeForce
+private _lastTeamName = _player getVariable ["vn_mf_db_player_group", "MikeForce"];
+// Attempt team change, defaulting to MikeForce is team is full.
+[_player, _lastTeamName, "DEFAULT"] call vn_mf_fnc_change_team;
 
 
 // load last loadout

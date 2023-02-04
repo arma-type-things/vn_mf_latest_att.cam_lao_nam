@@ -102,16 +102,6 @@ class CfgDebriefing
 		picture = "";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
-
-	class ReservedSlot
-	{
-		title = "RESERVED SLOT";
-		subtitle = "Access Denied";
-		description = "If you see this, you've selected a restricted team (OPFOR); reconnect and choose a player (BLUFOR) team";
-		pictureBackground = "";
-		picture = "";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
 };
 
 //Show melee weapons in the arsenal
