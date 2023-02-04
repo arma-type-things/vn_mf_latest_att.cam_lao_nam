@@ -132,36 +132,3 @@ class GreenHornets
     onJoin = "";
     onLeave = "";
 };
-class DacCong
-{
-    name = "Dac Cong [OPFOR Commandos]";
-    icon = "";
-    shortname = "Dac Cong";
-    unit = "vn_o_men_nva_dc_13";
-    
-    class rolelimits 
-    {
-        medic = 1;
-        engineer = 1;
-        explosiveSpecialist = 1;
-        vn_artillery = 0;
-    };
-    
-    class defaultTraits
-    {
-        camouflageCoef = 0.8;
-        audibleCoef = 0.6;
-        loadCoef = 1;
-        engineer = false;
-        explosiveSpecialist = false;
-        medic = false;
-        UAVHacker = false;
-        vn_artillery = false;
-        harassable = true;
-        scout = true;
-    };
-
-    //Function Calls on team Join
-    onJoin = "";
-    onLeave = "";
-};

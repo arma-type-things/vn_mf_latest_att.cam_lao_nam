@@ -23,11 +23,6 @@ class unlocked
 	lockTeam = "Unlocked";
 };
 
-class cas_team
-{
-	lockTeam = "CASLock";
-};
-
 //Jeeps + Small Cars
 class vn_b_wheeled_m151_01 : unlocked {};
 class vn_b_wheeled_m151_02 : unlocked {};

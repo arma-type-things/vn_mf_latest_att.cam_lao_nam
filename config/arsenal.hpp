@@ -503,7 +503,6 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_prop_food_pir_01_05",{0,0,0,0}},
 			{"vn_prop_food_sack_01",{0,0,0,0}},
 			{"vn_prop_food_sack_02",{0,0,0,0}},
-			{"vn_b_item_lighter_01",{0,0,0,0}},
 			//Medication
 			{"vn_prop_med_antibiotics",{0,0,0,0}},
 			{"vn_prop_med_antimalaria",{0,0,0,0}},
