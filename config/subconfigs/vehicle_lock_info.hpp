@@ -109,7 +109,7 @@ class vn_b_air_ah1g_10_usmc : green_hornet {};
 
 //Choctaw
 class vn_b_air_ch34_01_01 : green_hornet {};
-class vn_b_air_ch34_03_01 : green_hornet {};
+class vn_b_air_ch34_03_01 : mike_force {};
 //Choctaw gunships
 class vn_b_air_ch34_04_01 : green_hornet {};
 class vn_b_air_ch34_04_02 : green_hornet {};
