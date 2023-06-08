@@ -462,6 +462,24 @@
         <Original>Add Sandbag</Original>
         <English>Add Sandbag</English>
       </Key>
+      <Key ID="STR_ATT_paradrop">
+        <Original>Paradrop</Original>
+        <English>Paradrop</English>
+      </Key>
+      <Key ID="STR_PARADROP_IN_PROGRESS">
+        <Original>Deployment in progress...</Original>
+        <Korean>고공침투 중...</Korean>
+        <French>Déploiement en cours...</French>
+        <German>Verlegung im Gange</German>
+        <Spanish>Despliegue en curso...</Spanish>
+        <Russian>Развертывание в процессе...</Russian>
+        <Italian>In attesa del lancio ...</Italian>
+        <Chinesesimp>正在部署中...</Chinesesimp>
+        <Chinese>正在佈署中...</Chinese>
+        <Turkish>Atlama süreci devam ediyor...</Turkish>
+        <Portuguese>Mobilização em andamento...</Portuguese>
+        <Czech>Probíhá výsadek...</Czech>
+      </Key>
     </Container>
     <Container name="interaction_overlay">
       <Key ID="STR_vn_mf_overlay_duty_officer_name">
@@ -530,6 +548,19 @@
       <Key ID="STR_para_overlay_in_progress">
         <Original>In Progress</Original>
         <English>In Progress</English>
+      </Key>
+      <Key ID="STR_ATT_overlay_paradrop_name">
+        <Original>Initiate Paradrop</Original>
+        <English>Initiate Paradrop</English>
+      </Key>
+      <Key ID="STR_ATT_overlay_paradrop_description">
+        <Original>Paradrop to a location on the map</Original>
+      </Key>
+      <Key ID="STR_ATT_Paradrop_Param">
+        <Original>Paradrop</Original>
+      </Key>
+      <Key ID="STR_ATT_Paradrop_Cancel">
+          <Original>Cancel</Original>
       </Key>
     </Container>
     <Container name="notifications">

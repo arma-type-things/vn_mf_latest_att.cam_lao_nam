@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=522;
+	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=7354;
+		nextID=7356;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3053;
+		nextID=3529;
 	};
 	class Camera
 	{
-		pos[]={16253.787,71.576279,6458.2979};
-		dir[]={-0.00062190893,-0.31658006,0.94857633};
-		up[]={-0.0002069999,0.94856668,0.31658983};
-		aside[]={1.0000119,-3.6137317e-007,0.00065494812};
+		pos[]={15720.732,18.873615,7136.6084};
+		dir[]={0.80292338,-0.43204787,-0.41066855};
+		up[]={0.38465491,0.90185058,-0.19673817};
+		aside[]={-0.45536199,0,-0.89030623};
 	};
 };
 binarizationWanted=0;
@@ -389,14 +389,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -440,14 +440,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -496,7 +496,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1051;
+		items=1052;
 		class Item0
 		{
 			dataType="Marker";
@@ -39820,6 +39820,24 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1051
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15723.965,15.937782,7134.7002};
+				angles[]={0,1.4206806,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="att_headquarters_map";
+			};
+			id=7355;
+			type="Land_vn_b_prop_mapstand_01";
+			atlOffset=0.00024032593;
 		};
 	};
 	class Connections
