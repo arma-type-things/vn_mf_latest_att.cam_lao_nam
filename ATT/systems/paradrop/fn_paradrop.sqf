@@ -4,8 +4,7 @@
 
 [] spawn {
     private [ "_dialog", "_backpack", "_backpackcontents" ];
-
-    markers_reset = [99999,99999,0];
+    markers_reset = getMarkerPos "spawn_marker";
     drop_altitude = 800;
 
     _dialog = createDialog "mikeforce_paradrop";
