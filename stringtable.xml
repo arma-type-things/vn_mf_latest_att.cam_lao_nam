@@ -559,6 +559,9 @@
       <Key ID="STR_ATT_Paradrop_Param">
         <Original>Paradrop</Original>
       </Key>
+      <Key ID="STR_ATT_Paradrop_Title">
+        <Original>Drop Here</Original>
+      </Key>
       <Key ID="STR_ATT_Paradrop_Cancel">
           <Original>Cancel</Original>
       </Key>

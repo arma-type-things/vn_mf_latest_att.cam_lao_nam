@@ -4,7 +4,7 @@
 
 [] spawn {
     private [ "_dialog", "_backpack", "_backpackcontents" ];
-    markers_reset = getMarkerPos "spawn_marker";
+    markers_reset = getMarkerPos "paradrop_marker";
     drop_altitude = 800;
 
     _dialog = createDialog "mikeforce_paradrop";
@@ -15,11 +15,11 @@
 
     [ "att_paradrop_event", "onMapSingleClick", { jumper_position = _pos } ] call BIS_fnc_addStackedEventHandler;
 
-    "spawn_marker" setMarkerTextLocal (localize "STR_ATT_Paradrop_Param");
+    "paradrop_marker" setMarkerTextLocal (localize "STR_ATT_Paradrop_Title");
 
     waitUntil { dialog };
     while { dialog && alive player && dojump == 0 } do {
-        "spawn_marker" setMarkerPosLocal jumper_position;
+        "paradrop_marker" setMarkerPosLocal jumper_position;
 
         sleep 0.1;
     };
@@ -29,8 +29,8 @@
         sleep 0.1;
     };
 
-    "spawn_marker" setMarkerPosLocal markers_reset;
-    "spawn_marker" setMarkerTextLocal "";
+    "paradrop_marker" setMarkerPosLocal markers_reset;
+    "paradrop_marker" setMarkerTextLocal "";
 
     [ "att_paradrop_event", "onMapSingleClick" ] call BIS_fnc_removeStackedEventHandler;
 
@@ -45,6 +45,7 @@
         _backpack = backpack player;
         if ( _backpack != "" && _backpack != "B_Parachute" ) then {
             _backpackcontents = backpackItems player;
+            sleep 0.1;
             removeBackpack player;
             sleep 0.1;
         };
