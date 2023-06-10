@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=522;
+	toggles=650;
 	class ItemIDProvider
 	{
-		nextID=7363;
+		nextID=7366;
 	};
 	class MarkerIDProvider
 	{
-		nextID=76;
+		nextID=78;
 	};
 	class LayerIndexProvider
 	{
-		nextID=3257;
+		nextID=3325;
 	};
 	class Camera
 	{
-		pos[]={15722.785,17.193462,7134.564};
-		dir[]={-0.95909166,-0.27109173,-0.08156281};
-		up[]={-0.27011672,0.96255344,-0.022971192};
-		aside[]={-0.084735863,0,0.9964034};
+		pos[]={15722.491,17.905069,7134.5225};
+		dir[]={0.47602469,-0.87920696,0.020423856};
+		up[]={0.87839997,0.47643805,0.037687957};
+		aside[]={0.042865895,3.0666615e-007,-0.999089};
 	};
 };
 binarizationWanted=0;
@@ -389,14 +389,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -440,14 +440,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -497,7 +497,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1048;
+		items=1051;
 		class Item0
 		{
 			dataType="Marker";
@@ -882,7 +882,7 @@ class Mission
 			fillName="SolidBorder";
 			a=-900;
 			b=-900;
-			angle=205.68996;
+			angle=205.68993;
 			drawBorder=1;
 			id=228;
 			atlOffset=5.865387;
@@ -1899,7 +1899,7 @@ class Mission
 			type="mil_arrow";
 			angle=11.032681;
 			id=423;
-			atlOffset=15.831757;
+			atlOffset=22.251999;
 		};
 		class Item87
 		{
@@ -11848,8 +11848,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15843.848,15.574976,7149.9429};
-				angles[]={0,0.0016819787,-0};
-
+				angles[]={0,0.0016819787,0};
 			};
 			side="Empty";
 			flags=5;
@@ -39155,7 +39154,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15767.511,14.98,7110.3677};
-				angles[]={0,0.047327258,-0};
+				angles[]={0,0.047327258,0};
 			};
 			areaSize[]={20,0,10};
 			areaIsRectangle=1;
@@ -39255,29 +39254,29 @@ class Mission
 			position[]={-10000,0,-10000};
 			name="paradrop_marker";
 			type="respawn_para";
-			id=7360;
+			id=7363;
 			atlOffset=89.423096;
 		};
 		class Item1049
 		{
 			dataType="Marker";
-			position[]={4962,443.17801,13623.781};
-			name="marker_75";
+			position[]={4960.9458,443.22699,13623.281};
+			name="marker_77";
 			text="Request Airlift";
 			type="mil_triangle";
 			colorName="ColorWEST";
-			id=7361;
-			atlOffset=-9.1552734e-005;
+			id=7364;
+			atlOffset=-0.00042724609;
 		};
 		class Item1050
 		{
 			dataType="Marker";
-			position[]={15723.496,14.98,7134.2959};
-			name="marker_76";
+			position[]={15723.453,14.98,7134.5093};
+			name="marker_78";
 			text="Request Airlift";
 			type="mil_triangle";
 			colorName="ColorWEST";
-			id=7362;
+			id=7365;
 		};
 	};
 	class Connections
