@@ -31,6 +31,14 @@ class FastTravel
 	variables[] = {};
 };
 
+class Paradrop
+{
+	name = $STR_ATT_overlay_paradrop_name;
+	icon = "";
+	description = $STR_ATT_overlay_paradrop_description;
+	variables[] = {};
+};
+
 class SupplyOfficer
 {
 	name = $STR_vn_mf_overlay_supply_officer_name;

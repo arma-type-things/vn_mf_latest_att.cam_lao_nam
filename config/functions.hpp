@@ -2,6 +2,7 @@ class CfgFunctions
 {
 	#include "..\paradigm\client\functions.hpp"
 	#include "..\paradigm\server\functions.hpp"
+	#include "..\ATT\functions.hpp"
 
 	class vn_mf
 	{

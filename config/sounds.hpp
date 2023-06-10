@@ -16,4 +16,9 @@ class CfgSounds
 		sound[]		= { "@vn\sounds_f_vietnam\sfx\vn_build_3.ogg",1.0,1.0,30 };
 		titles[]	= { "vn_build_3" };
 	};
+	class parasound	{
+        name = "parasound";
+        sound[] = {"ATT\res\c130.ogg", 1.0, 1};
+        titles[] = {};
+    };
 };
