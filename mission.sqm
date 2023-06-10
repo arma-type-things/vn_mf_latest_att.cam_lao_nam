@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3189;
+		nextID=3257;
 	};
 	class Camera
 	{
 		pos[]={15722.785,17.193462,7134.564};
-		dir[]={0.46527189,-0.88383341,0.04858619};
-		up[]={0.87905353,0.46780178,0.091795497};
-		aside[]={0.10386063,3.7252903e-009,-0.99459189};
+		dir[]={-0.95909166,-0.27109173,-0.08156281};
+		up[]={-0.27011672,0.96255344,-0.022971192};
+		aside[]={-0.084735863,0,0.9964034};
 	};
 };
 binarizationWanted=0;
@@ -389,14 +389,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -440,14 +440,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -882,7 +882,7 @@ class Mission
 			fillName="SolidBorder";
 			a=-900;
 			b=-900;
-			angle=205.68999;
+			angle=205.68996;
 			drawBorder=1;
 			id=228;
 			atlOffset=5.865387;
