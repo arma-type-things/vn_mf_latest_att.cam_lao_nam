@@ -389,14 +389,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -440,14 +440,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -497,7 +497,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1051;
+		items=1048;
 		class Item0
 		{
 			dataType="Marker";
@@ -882,7 +882,7 @@ class Mission
 			fillName="SolidBorder";
 			a=-900;
 			b=-900;
-			angle=205.68993;
+			angle=205.68999;
 			drawBorder=1;
 			id=228;
 			atlOffset=5.865387;
@@ -11848,7 +11848,8 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15843.848,15.574976,7149.9429};
-				angles[]={0,0.0016819787,0};
+				angles[]={0,0.0016819787,-0};
+
 			};
 			side="Empty";
 			flags=5;
@@ -39154,7 +39155,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15767.511,14.98,7110.3677};
-				angles[]={0,0.047327258,0};
+				angles[]={0,0.047327258,-0};
 			};
 			areaSize[]={20,0,10};
 			areaIsRectangle=1;
