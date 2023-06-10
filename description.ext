@@ -113,3 +113,6 @@ use_paradigm_init = 1;
 
 // VN HAM init
 #include "config\init.hpp"
+
+// ATT Modifications / code
+#include "ATT\att.hpp"

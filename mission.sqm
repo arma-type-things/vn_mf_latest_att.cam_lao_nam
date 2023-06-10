@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=522;
+	toggles=650;
 	class ItemIDProvider
 	{
-		nextID=7360;
+		nextID=7366;
 	};
 	class MarkerIDProvider
 	{
-		nextID=74;
+		nextID=78;
 	};
 	class LayerIndexProvider
 	{
-		nextID=3121;
+		nextID=3325;
 	};
 	class Camera
 	{
-		pos[]={15719.307,18.38558,7136.0439};
-		dir[]={0.75456858,-0.54232979,-0.36958039};
-		up[]={0.48706016,0.84015286,-0.23855807};
-		aside[]={-0.43987563,-5.1152892e-007,-0.8980996};
+		pos[]={15722.491,17.905069,7134.5225};
+		dir[]={0.47602469,-0.87920696,0.020423856};
+		up[]={0.87839997,0.47643805,0.037687957};
+		aside[]={0.042865895,3.0666615e-007,-0.999089};
 	};
 };
 binarizationWanted=0;
@@ -497,7 +497,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1048;
+		items=1051;
 		class Item0
 		{
 			dataType="Marker";
@@ -882,7 +882,7 @@ class Mission
 			fillName="SolidBorder";
 			a=-900;
 			b=-900;
-			angle=205.68999;
+			angle=205.68993;
 			drawBorder=1;
 			id=228;
 			atlOffset=5.865387;
@@ -1899,7 +1899,7 @@ class Mission
 			type="mil_arrow";
 			angle=11.032681;
 			id=423;
-			atlOffset=15.831757;
+			atlOffset=22.251999;
 		};
 		class Item87
 		{
@@ -11848,7 +11848,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15843.848,15.574976,7149.9429};
-				angles[]={0,0.0016819787,-0};
+				angles[]={0,0.0016819787,0};
 			};
 			side="Empty";
 			flags=5;
@@ -19174,6 +19174,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				name="farp_foghorn_hooch";
 			};
 			id=6339;
 			type="Land_vn_hootch_02_03";
@@ -39153,7 +39154,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15767.511,14.98,7110.3677};
-				angles[]={0,0.047327258,-0};
+				angles[]={0,0.047327258,0};
 			};
 			areaSize[]={20,0,10};
 			areaIsRectangle=1;
@@ -39216,17 +39217,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15724.186,15.937542,7134.6436};
-				angles[]={0,1.3351443,-0};
+				position[]={15724.186,15.937782,7134.6431};
+				angles[]={0,1.335142,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="att_headquarters_map";
 				disableSimulation=1;
 			};
 			id=7359;
 			type="Land_vn_b_prop_mapstand_01";
+			atlOffset=0.00024032593;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -39244,6 +39247,36 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1048
+		{
+			dataType="Marker";
+			position[]={-10000,0,-10000};
+			name="paradrop_marker";
+			type="respawn_para";
+			id=7363;
+			atlOffset=89.423096;
+		};
+		class Item1049
+		{
+			dataType="Marker";
+			position[]={4960.9458,443.22699,13623.281};
+			name="marker_77";
+			text="Request Airlift";
+			type="mil_triangle";
+			colorName="ColorWEST";
+			id=7364;
+			atlOffset=-0.00042724609;
+		};
+		class Item1050
+		{
+			dataType="Marker";
+			position[]={15723.453,14.98,7134.5093};
+			name="marker_78";
+			text="Request Airlift";
+			type="mil_triangle";
+			colorName="ColorWEST";
+			id=7365;
 		};
 	};
 	class Connections

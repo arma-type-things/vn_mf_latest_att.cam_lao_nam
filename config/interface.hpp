@@ -4,4 +4,5 @@ class RscTitles : ParadigmRscTitles
 {
 	// Overlays
 	#include "ui\timerOverlay\overlay.hpp"
+	#include "..\ATT\titles.hpp"
 };

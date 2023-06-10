@@ -92,6 +92,9 @@ progressLoadingScreen 1.0;
 //Setup teleporters
 call vn_mf_fnc_action_teleport;
 
+//Setup paradrop
+call ATT_fnc_action_paradrop;
+
 call vn_mf_fnc_apply_unit_traits;
 
 call vn_mf_fnc_action_trait;
